@@ -1,13 +1,14 @@
 import { Routes,Route } from 'react-router-dom';
+import { Countries } from './pages/Countries';
 import './App.css'
 
 function App() {
 
   return (
     <main>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+        <Routes>
+          <Route path='/' element={<Countries/>} />
+        </Routes>
     </main>
   )
 }
