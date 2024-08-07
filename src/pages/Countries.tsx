@@ -10,6 +10,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 
 export const Countries = () => {
+
+  const [countryname, setCountryname] = useState('');
+  const [region, setRegion] = useState('');
+  
+  useEffect(()=>{
+
+  },[])
+
   return (
     <div className="w-full h-screen border-2 border-red-900 px-7 py-7">
       <form className="flex flex-col gap-7 border-2 border-red-500">
