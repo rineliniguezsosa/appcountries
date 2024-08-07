@@ -15,8 +15,12 @@ export const Countries = () => {
   const [countryname, setCountryname] = useState('');
   const [region, setRegion] = useState('');
 
-  useEffect(()=>{
+  const getCountries = async () =>{
+    
+  }
 
+  useEffect(()=>{
+    getCountries()
   },[])
 
   const handleCountryname = () =>{
