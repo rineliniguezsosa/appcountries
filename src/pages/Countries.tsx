@@ -19,6 +19,7 @@ export const Countries = () => {
     try {
       const countriesApiUrl:string = 'https://restcountries.com/v3.1/all/';
       const req = await axios.get(countriesApiUrl);
+      const resp = await req.data;
     } catch (error) {
       console.log("Server error",error);
     }
