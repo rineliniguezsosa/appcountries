@@ -1,3 +1,4 @@
+import React from 'react'
 import { useEffect,useState } from "react";
 import { 
   IconButton, InputAdornment,MenuItem, SelectChangeEvent
@@ -33,8 +34,8 @@ export const Countries = () => {
     getCountries()
   },[])
 
-  const handleCountryname = () =>{
-
+  const handleCountryname = (event:React.ChangeEvent<HTMLInputElement>) =>{
+    console.log(event);
   }
 
   return (
