@@ -1,8 +1,8 @@
 import { FormControl } from "@mui/material"
+import { MuiFormControlProps } from '../types/index'
 
-
-export const MuiFormControl = () => {
+export const MuiFormControl = ({variant,fullWidth}:MuiFormControlProps) => {
   return (
-    <FormControl/>
+    <FormControl variant={variant} fullWidth={fullWidth}/>
   )
 }
