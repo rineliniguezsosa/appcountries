@@ -6,3 +6,8 @@ export interface MuiButtonProps {
     title:string,
     icon:React.ReactNode
 }
+
+export interface MuiFormControlProps {
+    variant:'filled'|'outlined'|'standard',
+    fullWidth:boolean
+}
