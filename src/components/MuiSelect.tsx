@@ -1,7 +1,8 @@
+import { Select } from "@mui/material"
+import {MuiSelectProps} from '../types'
 
-
-export const MuiSelect = () => {
+export const MuiSelect = ({labelId, id, fullWidth, label, children }:MuiSelectProps) => {
   return (
-    <div>MuiSelect</div>
+    <Select labelId={labelId} id={id} fullWidth={fullWidth} label={label}>{children}</Select>
   )
 }
