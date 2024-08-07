@@ -13,10 +13,14 @@ export const Countries = () => {
 
   const [countryname, setCountryname] = useState('');
   const [region, setRegion] = useState('');
-  
+
   useEffect(()=>{
 
   },[])
+
+  const handleCountryname = () =>{
+    
+  }
 
   return (
     <div className="w-full h-screen border-2 border-red-900 px-7 py-7">
@@ -43,6 +47,7 @@ export const Countries = () => {
                           </InputAdornment>
                         }
                         label="Search for a country..."
+                        onChange={handleCountryname}
                       />
       
            </MuiFormControl>
