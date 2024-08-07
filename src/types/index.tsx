@@ -17,5 +17,5 @@ export interface MuiInputLabelProps {
     className:string,
     id:string,
     htmlFor:string,
-    title:string
+    children:React.ReactNode
 }
