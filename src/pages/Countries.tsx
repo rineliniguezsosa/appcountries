@@ -5,13 +5,14 @@ import {
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
 import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
+import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 
 export const Countries = () => {
 
-  const [countries, setCountries] = useState([])
+  const [countries, setCountries] = useState<[] | CountriesTypes[]>([])
   const [countryname, setCountryname] = useState('');
   const [region, setRegion] = useState('');
 
