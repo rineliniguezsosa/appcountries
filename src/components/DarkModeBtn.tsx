@@ -6,10 +6,10 @@ export const DarkModeBtn = () => {
   const [darkmode, setdarkmode] = useState(false);
 
   useEffect(()=>{
-
+    
   },[darkmode])
 
   return (
-    <MuiButton variant="text" title="Dark mode" icon={<DarkModeOutlinedIcon/>}/>      
+    <MuiButton variant="text" onClick={()=> setdarkmode(!darkmode)} title="Dark mode" icon={<DarkModeOutlinedIcon/>}/>      
   )
 }
