@@ -6,7 +6,7 @@ export const DarkModeBtn = () => {
   const [darkmode, setdarkmode] = useState(false);
 
   useEffect(()=>{
-    
+    darkmode ? document.documentElement.classList.toggle('dark') : document.documentElement.classList.remove('dark')
   },[darkmode])
 
   return (
