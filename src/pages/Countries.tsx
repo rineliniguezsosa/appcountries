@@ -39,7 +39,7 @@ export const Countries = () => {
            {/* fin FormControl */}
                         
            {/* inicio FormControl*/}
-           <MuiFormControl variant="outlined" fullWidth={true}>
+           <MuiFormControl variant="outlined" className="w-3/5">
                     <MuiInputLabel 
                       className="font-bold font-sans-extrabold" 
                       id="select-region"
