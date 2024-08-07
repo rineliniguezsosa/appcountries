@@ -16,7 +16,11 @@ export const Countries = () => {
   const [region, setRegion] = useState('');
 
   const getCountries = async () =>{
-    
+    try {
+      
+    } catch (error) {
+      console.log("Server error",error);
+    }
   }
 
   useEffect(()=>{
