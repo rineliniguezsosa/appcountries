@@ -3,6 +3,7 @@ import {
    MenuItem, SelectChangeEvent
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
+import { MuiInputLabel } from "../components/MuiInputLabel";
 
 export const Countries = () => {
   return (
@@ -10,13 +11,13 @@ export const Countries = () => {
       <form>
            {/* inicio FormControl */}
            <MuiFormControl variant="outlined" fullWidth={true}>
-                    <InputLabel 
+                    <MuiInputLabel 
                     className="text-LightModeDarkGrayInput" 
                     id="country-name" 
                     htmlFor="outlined-adornment-search"
                     >
                       Search for a country...
-                    </InputLabel>
+                    </MuiInputLabel>
       
            </MuiFormControl>
            {/* fin FormControl */}
