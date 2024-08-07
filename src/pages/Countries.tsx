@@ -4,6 +4,7 @@ import {
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
+import { MuiCircularProgress } from "../components/MuiCircularProgress";
 import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
 import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
@@ -97,7 +98,9 @@ export const Countries = () => {
 
       {/* inicio card countries */}
       <div className="w-full border-2 border-yellow-600 mt-3 flex flex-col items-center">
-
+          {
+            countries && countries.length == 0 ? <MuiCircularProgress color="primary"/> : <h1>Allcomponentescards</h1>
+          }
       </div>
       {/* fin card countries */}
 
