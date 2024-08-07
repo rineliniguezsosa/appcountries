@@ -23,6 +23,7 @@ export const Countries = () => {
       setCountries(resp);
     } catch (error) {
       console.log("Server error",error);
+      setCountries([]);
     }
   }
 
