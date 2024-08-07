@@ -12,3 +12,9 @@ export interface MuiFormControlProps {
     fullWidth:boolean,
     children:React.ReactNode
 }
+
+export interface MuiInputLabelProps {
+    className:string,
+    id:string
+    htmlFor:string
+}
