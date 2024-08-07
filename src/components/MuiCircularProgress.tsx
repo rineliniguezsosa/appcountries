@@ -1,9 +1,10 @@
 import { CircularProgress } from '@mui/material';
+import { MuiCircularProgressProps } from '../types';
 
-export const MuiCircularProgress = () => {
+export const MuiCircularProgress = ({color}:MuiCircularProgressProps) => {
   return (
     <div>
-        <CircularProgress/>
+        <CircularProgress color={color}/>
     </div>
   )
 }
