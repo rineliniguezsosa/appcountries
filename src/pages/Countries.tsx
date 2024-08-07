@@ -17,7 +17,7 @@ export const Countries = () => {
 
   const getCountries = async () =>{
     try {
-      
+      const countriesApiUrl:string = 'https://restcountries.com/v3.1/all/';
     } catch (error) {
       console.log("Server error",error);
     }
