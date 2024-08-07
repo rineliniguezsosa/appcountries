@@ -23,6 +23,7 @@ export interface MuiInputLabelProps {
 export interface MuiOutlinedInputProps {
     id:string,
     fullWidth:boolean,
+    type:'text'
     startAdornment:React.ReactNode,
     label:string
 }
