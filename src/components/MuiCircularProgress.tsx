@@ -1,7 +1,9 @@
-
+import { CircularProgress } from '@mui/material';
 
 export const MuiCircularProgress = () => {
   return (
-    <div>MuiCircularProgress</div>
+    <div>
+        <CircularProgress/>
+    </div>
   )
 }
