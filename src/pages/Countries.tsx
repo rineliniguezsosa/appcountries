@@ -5,6 +5,7 @@ import {
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
 import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
+import { MuiSelect } from "../components/MuiSelect";
 import SearchIcon from '@mui/icons-material/Search';
 
 export const Countries = () => {
