@@ -9,5 +9,6 @@ export interface MuiButtonProps {
 
 export interface MuiFormControlProps {
     variant:'filled'|'outlined'|'standard',
-    fullWidth:boolean
+    fullWidth:boolean,
+    children:React.ReactNode
 }
