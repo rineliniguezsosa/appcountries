@@ -1,7 +1,9 @@
-import { useEffect } from "react"
+import { MuiButton } from "./MuiButton";
+import { useEffect,useState } from "react"
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 export const DarkModeBtn = () => {
   return (
-    <div>DarkModeBtn</div>
+    <MuiButton variant="text" title="Dark mode" icon={<DarkModeOutlinedIcon/>}/>      
   )
 }
