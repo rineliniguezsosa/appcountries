@@ -23,7 +23,7 @@ export const Countries = () => {
 
                     <MuiOutlinedInput
                         id="outlined-adornment-search"
-                        fullWidth
+                        fullWidth={true}
                         type="text"
                         startAdornment={
                           <InputAdornment position="start">
