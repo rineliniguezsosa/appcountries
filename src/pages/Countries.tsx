@@ -1,5 +1,5 @@
 import { 
-  IconButton, InputAdornment, InputLabel, OutlinedInput, Select,
+  IconButton, InputAdornment, OutlinedInput, Select,
    MenuItem, SelectChangeEvent
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
