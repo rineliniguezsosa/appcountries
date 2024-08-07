@@ -37,3 +37,7 @@ export interface MuiSelectProps {
     label:string,
     children:React.ReactNode
 }
+
+export interface MuiCircularProgressProps {
+    color:'primary'| 'secondary'| 'error'| 'info'| 'success'| 'warning';
+}
