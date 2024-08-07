@@ -1,7 +1,8 @@
+import { FormControl } from "@mui/material"
 
 
 export const MuiFormControl = () => {
   return (
-    <div>MuiFormControl</div>
+    <FormControl/>
   )
 }
