@@ -48,6 +48,20 @@ export const Countries = () => {
                       >
                         Filter by Region
                     </MuiInputLabel>
+
+                    <MuiSelect
+                      labelId="select-region"
+                      id="region"
+                      fullWidth={true}
+                      label="Filter by Region"
+                    >
+                      <MenuItem value=""><em>None</em></MenuItem>
+                      <MenuItem value="Africa">Africa</MenuItem>
+                      <MenuItem value="Americas">America</MenuItem>
+                      <MenuItem value="Asia">Asia</MenuItem>
+                      <MenuItem value="Europe">Europe</MenuItem>
+                      <MenuItem value="Oceania">Oceania</MenuItem>
+                    </MuiSelect>
            </MuiFormControl>
            {/* fin FormControl*/}
       </form>
