@@ -26,7 +26,8 @@ export interface MuiOutlinedInputProps {
     fullWidth:boolean,
     type:'text',
     startAdornment:React.ReactNode,
-    label:string
+    label:string,
+    onChange:()=> void
 }
 
 export interface MuiSelectProps {
