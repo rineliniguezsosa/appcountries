@@ -15,6 +15,7 @@ export interface MuiFormControlProps {
 
 export interface MuiInputLabelProps {
     className:string,
-    id:string
-    htmlFor:string
+    id:string,
+    htmlFor:string,
+    title:string
 }
