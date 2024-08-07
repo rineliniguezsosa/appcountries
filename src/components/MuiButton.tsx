@@ -1,7 +1,10 @@
 import { Button } from "@mui/material"
+import { MuiButtonProps } from "../types"
 
-export const MuiButton = () => {
+export const MuiButton = ({variant,onClick,title,icon}:MuiButtonProps) => {
   return (
-    <div>MuiButton</div>
+    <Button variant={variant} onClick={onClick} startIcon={icon}>
+        {title}
+    </Button>
   )
 }
