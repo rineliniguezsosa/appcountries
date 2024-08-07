@@ -12,7 +12,10 @@ export default {
         LightModeTextDarkBlue: 'hsl(200, 15%, 8%)', //Very Dark Blue (Light Mode Text)
         LightModeDarkGrayInput:'hsl(0, 0%, 52%)', // Dark Gray (Light Mode Input)
         LightModeBgGray: 'hsl(0, 0%, 98%)' // Very Light Gray (Light Mode Background)
-      }
+      },
+      screens:{
+        'xl2': {'min':'1440px'}, // Nuevo breakpoint para pantallas de 1440px
+      },
     },
   },
   plugins: [],
