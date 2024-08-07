@@ -19,3 +19,10 @@ export interface MuiInputLabelProps {
     htmlFor:string,
     children:React.ReactNode
 }
+
+export interface MuiOutlinedInputProps {
+    id:string,
+    fullWidth:boolean,
+    startAdornment:React.ReactNode,
+    label:string
+}
