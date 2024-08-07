@@ -63,7 +63,15 @@ export const Countries = () => {
                     </MuiSelect>
            </MuiFormControl>
            {/* fin FormControl*/}
+
       </form>
+
+      {/* inicio card countries */}
+      <div className="w-full border-2 border-yellow-600 mt-3 flex flex-col items-center">
+
+      </div>
+      {/* fin card countries */}
+
     </div>
   )
 }
