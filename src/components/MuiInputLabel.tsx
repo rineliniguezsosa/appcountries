@@ -1,8 +1,8 @@
 import { InputLabel } from "@mui/material"
 import { MuiInputLabelProps } from '../types/index'
 
-export const MuiInputLabel = ({className,id,htmlFor,title}:MuiInputLabelProps) => {
+export const MuiInputLabel = ({className,id,htmlFor,children}:MuiInputLabelProps) => {
   return (
-    <InputLabel className={className} id={id} htmlFor={htmlFor}>{title}</InputLabel>
+    <InputLabel className={className} id={id} htmlFor={htmlFor}>{children}</InputLabel>
   )
 }
