@@ -11,6 +11,7 @@ import axios from 'axios';
 
 export const Countries = () => {
 
+  const [countries, setCountries] = useState([])
   const [countryname, setCountryname] = useState('');
   const [region, setRegion] = useState('');
 
@@ -19,7 +20,7 @@ export const Countries = () => {
   },[])
 
   const handleCountryname = () =>{
-    
+
   }
 
   return (
