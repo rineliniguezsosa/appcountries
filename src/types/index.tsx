@@ -9,7 +9,8 @@ export interface MuiButtonProps {
 
 export interface MuiFormControlProps {
     variant:'filled'|'outlined'|'standard',
-    fullWidth:boolean,
+    fullWidth?:boolean,
+    className?:string,
     children:React.ReactNode
 }
 
@@ -32,6 +33,7 @@ export interface MuiSelectProps {
     labelId:string,
     id:string,
     fullWidth:boolean,
+    className?:string,
     label:string,
     children:React.ReactNode
 }
