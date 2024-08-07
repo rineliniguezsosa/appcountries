@@ -4,6 +4,8 @@ import {
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
+import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
+import SearchIcon from '@mui/icons-material/Search';
 
 export const Countries = () => {
   return (
@@ -18,6 +20,20 @@ export const Countries = () => {
                     >
                       Search for a country...
                     </MuiInputLabel>
+
+                    <MuiOutlinedInput
+                        id="outlined-adornment-search"
+                        fullWidth
+                        type="text"
+                        startAdornment={
+                          <InputAdornment position="start">
+                            <IconButton edge="start">
+                                    <SearchIcon/>
+                            </IconButton>
+                          </InputAdornment>
+                        }
+                        label="Search for a country..."
+                      />
       
            </MuiFormControl>
            {/* fin FormControl */}
