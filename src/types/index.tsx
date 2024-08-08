@@ -36,7 +36,8 @@ export interface MuiSelectProps {
     fullWidth:boolean,
     className?:string,
     label:string,
-    children:React.ReactNode
+    children:React.ReactNode,
+    onChange:()=> void
 }
 
 export interface MuiCircularProgressProps {
