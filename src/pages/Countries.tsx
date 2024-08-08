@@ -37,7 +37,7 @@ export const Countries = () => {
     let filteredCountry = countriescopy;
 
     if(countryname){
-      filteredCountry = filteredCountry.filter(country => country.name.common.toLowerCase().includes(countryname.toLowerCase()))
+      filteredCountry = await filteredCountry.filter(country => country.name.common.toLowerCase().includes(countryname.toLowerCase()))
     }
     console.log("filter country",filteredCountry);
     
