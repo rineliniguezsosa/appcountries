@@ -39,6 +39,13 @@ export const Countries = () => {
     if(countryname){
       filteredCountry = await filteredCountry.filter(country => country.name.common.toLowerCase().includes(countryname.toLowerCase()))
     }
+
+    if(region){
+      filteredCountry = await filteredCountry.filter(country => country.region.toLowerCase().includes(region.toLowerCase()))
+    }
+
+    console.log(filteredCountry);
+    
     setCountries(filteredCountry)
     
   }
