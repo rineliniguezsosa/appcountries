@@ -5,7 +5,7 @@ import { useEffect,useState } from "react";
 
 export const CountriesDetail = () => {
   const navigate = useNavigate();
-  const { name } = useParams();
+  const { name } = useParams<{name:string}>();
   console.log("name",name);
   
   console.log(navigate);
