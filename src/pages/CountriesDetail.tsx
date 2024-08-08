@@ -12,10 +12,10 @@ export const CountriesDetail = () => {
   }
   
   return (
-    <div className="w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
+    <div className="px-7 py-10 w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
 
       {/* inicio div */}
-      <div className="border-2 border-blue-400 px-7 py-7 ">
+      <div className="border-2 border-blue-400">
         <MuiButton
           onClick={returnCountriespage}
           variant="outlined"
@@ -28,7 +28,7 @@ export const CountriesDetail = () => {
       {/* fin div */}
 
       {/* inicio article */}
-      <article>
+      <article className="w-full">
 
       </article>
       {/* fin article */}
