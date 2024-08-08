@@ -131,7 +131,7 @@ export const Countries = () => {
       </form>
 
       {/* inicio card countries */}
-      <div className="w-full border-2 border-yellow-600 mt-10 flex flex-col items-center gap-10">
+      <div className="w-full border-2 border-yellow-600 mt-10 flex flex-col items-center gap-10 xl2:flex-row flex-wrap items-start justify-between">
           {
             countries && countries.length == 0 ? 
             (
