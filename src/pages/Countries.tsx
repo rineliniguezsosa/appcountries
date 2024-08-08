@@ -39,7 +39,7 @@ export const Countries = () => {
   }
 
   const handleRegionChange = (event:SelectChangeEvent<string>) => {
-    console.log(event.target.value);
+    setRegion(event.target.value);
   }
 
   return (
