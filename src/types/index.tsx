@@ -1,3 +1,4 @@
+import { SelectChangeEvent } from '@mui/material'
 import React from 'react'
 
 export interface MuiButtonProps {
@@ -37,7 +38,7 @@ export interface MuiSelectProps {
     className?:string,
     label:string,
     children:React.ReactNode,
-    onChange:()=> void
+    onChange:(event:SelectChangeEvent<string>)=> void
 }
 
 export interface MuiCircularProgressProps {
