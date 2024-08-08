@@ -12,8 +12,15 @@ export const CountriesDetail = () => {
   }
   
   return (
-    <div className="w-full border-2 border-red-300">
-      <MuiButton onClick={returnCountriespage} variant="outlined" title="Back" icon={<WestIcon/>} />
+    <div className="w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
+      <MuiButton 
+        onClick={returnCountriespage} 
+        variant="outlined"
+        title="Back"
+        className="font-sans font-semibold text-xs text-black" 
+        style={{textTransform:'none',boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",border:'none'}} 
+        icon={<WestIcon className="text-black"/>} 
+        />
     </div>
   )
 }
