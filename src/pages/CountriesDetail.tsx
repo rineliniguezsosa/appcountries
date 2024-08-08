@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 import { MuiButton } from "../components/MuiButton"
 import WestIcon from '@mui/icons-material/West';
 
