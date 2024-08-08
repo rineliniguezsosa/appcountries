@@ -5,6 +5,9 @@ import WestIcon from '@mui/icons-material/West';
 
 export const CountriesDetail = () => {
   const navigate = useNavigate();
+  const { name } = useParams();
+  console.log("name",name);
+  
   console.log(navigate);
 
   const returnCountriespage = () =>{
