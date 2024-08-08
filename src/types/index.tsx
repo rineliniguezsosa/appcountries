@@ -5,6 +5,7 @@ export interface MuiButtonProps {
     variant:'text' | 'outlined' | 'contained'
     onClick:()=> void,
     title:string,
+    className?:string,
     icon:React.ReactNode
 }
 
