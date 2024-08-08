@@ -13,6 +13,8 @@ export const CountriesDetail = () => {
   
   return (
     <div className="w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
+
+      {/* inicio div */}
       <div className="border-2 border-blue-400 px-7 py-7 ">
         <MuiButton
           onClick={returnCountriespage}
@@ -23,9 +25,13 @@ export const CountriesDetail = () => {
           icon={<WestIcon className="text-black"/>}
           />
       </div>
+      {/* fin div */}
+
+      {/* inicio article */}
       <article>
-        
+
       </article>
+      {/* fin article */}
     </div>
   )
 }
