@@ -44,3 +44,12 @@ export interface MuiSelectProps {
 export interface MuiCircularProgressProps {
     color:'primary'| 'secondary'| 'error'| 'info'| 'success'| 'warning';
 }
+
+export interface CountryCardProps {
+    id:number,
+    flag:string,
+    name:string,
+    population:number
+    region:string,
+    capital:string[] | undefined
+}
