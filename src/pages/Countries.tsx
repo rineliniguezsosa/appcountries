@@ -69,8 +69,8 @@ export const Countries = () => {
   }
 
   return (
-    <div className="w-full border-2 border-red-900 px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
-      <form className="flex flex-col gap-7 border-2 border-red-500">
+    <div className="w-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
+      <form className="flex flex-col gap-7 ">
            {/* inicio FormControl */}
            <MuiFormControl variant="outlined" fullWidth={true}>
                     <MuiInputLabel 
