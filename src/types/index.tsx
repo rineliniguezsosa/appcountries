@@ -1,11 +1,12 @@
 import { SelectChangeEvent } from '@mui/material'
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
 export interface MuiButtonProps {
     variant:'text' | 'outlined' | 'contained'
     onClick:()=> void,
     title:string,
     className?:string,
+    style?:CSSProperties,
     icon:React.ReactNode
 }
 
