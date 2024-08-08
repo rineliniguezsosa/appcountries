@@ -46,7 +46,6 @@ export interface MuiCircularProgressProps {
 }
 
 export interface CountryCardProps {
-    id:number,
     flag:string,
     name:string,
     population:number
