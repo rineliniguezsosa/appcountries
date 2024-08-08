@@ -93,6 +93,7 @@ export const Countries = () => {
                           </InputAdornment>
                         }
                         label="Search for a country..."
+                        className='bg-LightModeElements shadow-md'
                         onChange={handleCountryname}
                       />
       
