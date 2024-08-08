@@ -27,7 +27,7 @@ export interface MuiOutlinedInputProps {
     type:'text',
     startAdornment:React.ReactNode,
     label:string,
-    onChange:()=> void
+    onChange:(event:React.ChangeEvent<HTMLInputElement>)=> void
 }
 
 export interface MuiSelectProps {
