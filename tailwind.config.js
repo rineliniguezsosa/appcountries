@@ -7,6 +7,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'sans': ['Nunito Sans', 'sans-serif'],
+        'sans-light': ['Nunito Sans', 'sans-serif', '300'],
+        'sans-semibold': ['Nunito Sans', 'sans-serif', '600'],
+        'sans-extrabold': ['Nunito Sans', 'sans-serif', '800'],
+      },
       colors:{
         DarkBlueBackground:'hsl(209, 23%, 22%)', // Dark Blue (Dark Mode Elements)
         DarkModeBg: 'hsl(207, 26%, 17%)',//Very Dark Blue (Dark Mode Background)
