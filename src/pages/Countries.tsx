@@ -70,9 +70,9 @@ export const Countries = () => {
 
   return (
     <div className="w-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
-      <form className="flex flex-col gap-7 ">
+      <form className="flex flex-col gap-7 border-2 border-red-500 xl2:flex-row justify-between">
            {/* inicio FormControl */}
-           <MuiFormControl variant="outlined" fullWidth={true}>
+           <MuiFormControl variant="outlined" className='w-full xl2:w-1/4'>
                     <MuiInputLabel 
                     className="text-LightModeDarkGrayInput" 
                     id="country-name" 
@@ -101,7 +101,7 @@ export const Countries = () => {
            {/* fin FormControl */}
                         
            {/* inicio FormControl*/}
-           <MuiFormControl variant="outlined" className="w-3/5">
+           <MuiFormControl variant="outlined" className="w-3/5 xl2:w-1/5">
                     <MuiInputLabel 
                       className="font-bold font-sans-extrabold" 
                       id="select-region"
