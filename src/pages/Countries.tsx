@@ -12,6 +12,7 @@ import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
+import { CountryCard } from '../components/CountryCard';
 
 export const Countries = () => {
 
@@ -130,7 +131,23 @@ export const Countries = () => {
       {/* inicio card countries */}
       <div className="w-full border-2 border-yellow-600 mt-3 flex flex-col items-center">
           {
-            countries && countries.length == 0 ? <MuiCircularProgress color="primary"/> : <h1>Allcomponentescards</h1>
+            countries && countries.length == 0 ? 
+            (
+              <MuiCircularProgress color="primary"/>
+            ) 
+            : 
+            (
+              countries.map((item,index)=> (
+              <CountryCard
+                key={index}
+                flag={item.flags.svg}
+                name={item.name.common} 
+                population={item.population} 
+                region={item.region}
+                capital={item.capital}
+              />
+              ))
+            )
           }
       </div>
       {/* fin card countries */}
