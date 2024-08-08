@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import { CountryCardProps } from '../types'
 
-export const CountryCard = () => {
+export const CountryCard = ({id,flag,name,population,region,capital}:CountryCardProps) => {
   return (
-    <div>CountryCard</div>
+    <Link to={`/countries/dertail/${name}`}>CountryCard</Link>
   )
 }
