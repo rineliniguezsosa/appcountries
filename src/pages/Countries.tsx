@@ -38,6 +38,10 @@ export const Countries = () => {
     setCountryname(event.target.value);
   }
 
+  const handleRegionChange = (event:SelectChangeEvent<string>) => {
+    console.log(event.target.value);
+  }
+
   return (
     <div className="w-full h-screen border-2 border-red-900 px-7 py-7">
       <form className="flex flex-col gap-7 border-2 border-red-500">
@@ -84,6 +88,7 @@ export const Countries = () => {
                       id="region"
                       fullWidth={true}
                       label="Filter by Region"
+                      onChange={handleRegionChange}
                     >
                       <MenuItem value=""><em>None</em></MenuItem>
                       <MenuItem value="Africa">Africa</MenuItem>
