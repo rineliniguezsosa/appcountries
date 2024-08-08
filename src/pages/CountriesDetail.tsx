@@ -23,6 +23,9 @@ export const CountriesDetail = () => {
           icon={<WestIcon className="text-black"/>}
           />
       </div>
+      <article>
+        
+      </article>
     </div>
   )
 }
