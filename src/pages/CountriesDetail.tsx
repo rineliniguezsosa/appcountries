@@ -1,7 +1,7 @@
 import { useNavigate,useParams } from "react-router-dom";
 import { MuiButton } from "../components/MuiButton"
 import WestIcon from '@mui/icons-material/West';
-
+import { useEffect,useState } from "react";
 
 export const CountriesDetail = () => {
   const navigate = useNavigate();
