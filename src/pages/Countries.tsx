@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useEffect,useState } from "react";
 import { 
@@ -15,6 +16,7 @@ import axios from 'axios';
 export const Countries = () => {
 
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([])
+  const [countriescopy, setCountriescopy] = useState<[] | CountriesTypes[]>([])
   const [countryname, setCountryname] = useState('');
   const [region, setRegion] = useState('');
 
@@ -24,15 +26,31 @@ export const Countries = () => {
       const req = await axios.get(countriesApiUrl);
       const resp = await req.data;
       setCountries(resp);
+      setCountriescopy(resp)
     } catch (error) {
       console.log("Server error",error);
       setCountries([]);
     }
   }
 
+  const filteredCountry = async()=>{
+    let filteredCountry = countriescopy;
+
+    if(countryname){
+      filteredCountry = filteredCountry.filter(country => country.name.common.includes(countryname.toLowerCase()))
+    }
+    console.log("filter country",filteredCountry);
+    
+  }
+
   useEffect(()=>{
     getCountries()
   },[])
+
+  useEffect(() => {
+    filteredCountry()
+  }, [countryname,region])
+  
 
   const handleCountryname = (event:React.ChangeEvent<HTMLInputElement>) =>{
     setCountryname(event.target.value);
