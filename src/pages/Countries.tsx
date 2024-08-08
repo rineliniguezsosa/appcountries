@@ -114,6 +114,7 @@ export const Countries = () => {
                       labelId="select-region"
                       id="region"
                       fullWidth={true}
+                      className='bg-LightModeElements shadow-md'
                       label="Filter by Region"
                       onChange={handleRegionChange}
                     >
