@@ -10,6 +10,19 @@ export const CountriesDetail = () => {
   
   console.log(navigate);
 
+  const getCountryByName = async()=>{
+    try {
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
+  useEffect(()=>{
+    getCountryByName()
+  },[name])
+
   const returnCountriespage = () =>{
     navigate('/')
   }
