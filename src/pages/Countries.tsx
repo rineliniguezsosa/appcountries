@@ -35,7 +35,7 @@ export const Countries = () => {
   },[])
 
   const handleCountryname = (event:React.ChangeEvent<HTMLInputElement>) =>{
-    console.log(event);
+    setCountryname(event.target.value);
   }
 
   return (
