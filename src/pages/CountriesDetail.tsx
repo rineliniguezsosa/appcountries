@@ -67,8 +67,17 @@ export const CountriesDetail = () => {
           :
           (
             // falta el mapping de countries
-            <article className="w-full border-2 border-green-300">
+            countries.map((item,index)=> (
+            <article key={index} className="w-full border-2 border-green-300 flex flex-col">
+              <img  className="w-full"src={item.flags.svg} alt="flag" />
+
+              <div className="w-full border-2 border-blue-400 py-10">
+                <h1 className="font-sans font-extrabold">{item.name.common}</h1>
+
+                {/* <p><strong className="font-sans font-semibold text-xs">Native Name. </strong>{item.name.nativeName?.nld.common}</p> */}
+              </div>
             </article>
+            ))
           )
         }
       </div>
