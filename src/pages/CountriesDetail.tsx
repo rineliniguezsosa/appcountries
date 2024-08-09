@@ -47,7 +47,11 @@ export const CountriesDetail = () => {
     let nativeName:string = '';
     if(item.name.nativeName){
       nativeNameKey = Object.keys(item.name.nativeName)[0];
+      nativeName = item.name.nativeName[nativeNameKey]?.common;
+      console.log(nativeName);
+      
     }
+    console.log(nativeName);
     
     console.log(nativeNameKey);
     console.log(index);
