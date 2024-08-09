@@ -64,6 +64,8 @@ export const CountriesDetail = () => {
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Sub Region: </strong>{item.subregion}</p>
+
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
         </div>
       </article>
     )
