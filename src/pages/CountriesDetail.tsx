@@ -2,6 +2,7 @@
 import { useNavigate,useParams } from "react-router-dom";
 import { MuiButton } from "../components/MuiButton"
 import { MuiCircularProgress } from "../components/MuiCircularProgress";
+import { CountriesTypes } from '../types/api.countries';
 import WestIcon from '@mui/icons-material/West';
 import { useEffect,useState } from "react";
 import axios from 'axios';
@@ -9,7 +10,7 @@ import axios from 'axios';
 export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
   console.log(countries);
   
   console.log("name",name);
