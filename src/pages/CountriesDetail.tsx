@@ -44,6 +44,7 @@ export const CountriesDetail = () => {
   const returnCountryDetail = (item:CountriesTypes,index:number):JSX.Element =>{
     console.log(item);
     let nativeNameKey;
+    let nativeName:string = '';
     if(item.name.nativeName){
       nativeNameKey = Object.keys(item.name.nativeName)[0];
     }
