@@ -11,11 +11,11 @@ export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
-  console.log(countries);
+  // console.log(countries);
   
-  console.log("name",name);
+  // console.log("name",name);
   
-  console.log(navigate);
+  // console.log(navigate);
 
   const getCountryByName = async()=>{
     try {
@@ -40,7 +40,34 @@ export const CountriesDetail = () => {
   const returnCountriespage = () =>{
     navigate('/')
   }
+
+  const returnCountryDetail = (item:CountriesTypes,index:number):JSX.Element =>{
+    console.log(item);
+    let nativeNameKey;
+    if(item.name.nativeName){
+      nativeNameKey = Object.keys(item.name.nativeName)[0];
+    }
+    
+    console.log(nativeNameKey);
+    console.log(index);
+    
+    
+    return (
+      <article key={index} className="w-full border-2 border-green-300 flex flex-col">
+        <img  className="w-full"src={item.flags.svg} alt="flag" />
+
+       <div className="w-full border-2 border-blue-400 py-10">
+        <h1 className="font-sans font-extrabold">{item.name.common}</h1>
+
+        {JSON.stringify(Object.keys(item.name))}
+
+        {/* <p><strong className="font-sans font-semibold text-xs">Native Name. </strong>{item.name.nativeName?.nld.common}</p> */}
+          </div>
+      </article>
+    )
   
+  }
+
   return (
     <div className="px-7 py-10 w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
 
@@ -66,22 +93,11 @@ export const CountriesDetail = () => {
           )
           :
           (
-            // falta el mapping de countries
-            countries.map((item,index)=> (
-            <article key={index} className="w-full border-2 border-green-300 flex flex-col">
-              <img  className="w-full"src={item.flags.svg} alt="flag" />
-
-              <div className="w-full border-2 border-blue-400 py-10">
-                <h1 className="font-sans font-extrabold">{item.name.common}</h1>
-
-                {/* <p><strong className="font-sans font-semibold text-xs">Native Name. </strong>{item.name.nativeName?.nld.common}</p> */}
-              </div>
-            </article>
-            ))
+            countries.map(returnCountryDetail)
           )
         }
       </div>
-      {/* fin article */}
+      {/* fin article */}   
     </div>
   )
 }
