@@ -22,7 +22,7 @@ export const CountriesDetail = () => {
       setCountries(resp);
     } catch (error) {
       console.log(error);
-      
+      setCountries([])
     }
   }
 
