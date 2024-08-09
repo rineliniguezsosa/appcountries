@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigate,useParams } from "react-router-dom";
 import { MuiButton } from "../components/MuiButton"
 import WestIcon from '@mui/icons-material/West';
@@ -20,7 +21,11 @@ export const CountriesDetail = () => {
   }
 
   useEffect(()=>{
-    getCountryByName()
+    if(!name || name.trim().length === 0){
+       returnCountriespage()
+    }else{
+      getCountryByName() 
+    } 
   },[name])
 
   const returnCountriespage = () =>{
