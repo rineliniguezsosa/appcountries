@@ -55,17 +55,21 @@ export const CountriesDetail = () => {
         <img  className="w-full"src={item.flags.svg} alt="flag" />
 
         <div className="w-full border-2 border-blue-400 py-10">
-            <h1 className="font-sans font-extrabold">{item.name.common}</h1>
+            <h1 className="font-sans font-extrabold text-lg pb-5">{item.name.common}</h1>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Population: </strong>{item.population}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Population: </strong>{item.population}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Sub Region: </strong>{item.subregion}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Sub Region: </strong>{item.subregion}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
+
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.capital}</p>
+
+            <span>fdf</span>
         </div>
       </article>
     )
@@ -73,7 +77,7 @@ export const CountriesDetail = () => {
   }
 
   return (
-    <div className="px-7 py-10 w-full h-screen border-2 border-red-300 bg-LightModeBgGray ">
+    <div className="px-7 py-10 w-full border-2 border-red-300 bg-LightModeBgGray ">
 
       {/* inicio div */}
       <div className="border-2 border-blue-400">
