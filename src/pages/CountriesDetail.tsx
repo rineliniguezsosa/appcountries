@@ -60,6 +60,8 @@ export const CountriesDetail = () => {
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Population: </strong>{item.population}</p>
+
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
         </div>
       </article>
     )
