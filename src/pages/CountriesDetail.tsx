@@ -65,6 +65,7 @@ export const CountriesDetail = () => {
           )
           :
           (
+            // falta el mapping de countries
             <article className="w-full border-2 border-green-300">
             </article>
           )
