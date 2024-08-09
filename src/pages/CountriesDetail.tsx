@@ -18,6 +18,7 @@ export const CountriesDetail = () => {
       const countriesApiUrl:string = `https://restcountries.com/v3.1/name/${name}`;
       const req = await axios.get(countriesApiUrl);
       const resp = await req.data;
+      setCountries(resp);
     } catch (error) {
       console.log(error);
       
