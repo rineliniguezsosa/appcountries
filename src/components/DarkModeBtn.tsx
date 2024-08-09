@@ -10,6 +10,14 @@ export const DarkModeBtn = () => {
   },[darkmode])
 
   return (
-    <MuiButton variant="text" onClick={()=> setdarkmode(!darkmode)} title="Dark mode" className="font-sans font-semibold text-xs text-black" style={{textTransform:'none'}} icon={<DarkModeOutlinedIcon className="text-black"/>}/>      
+    <MuiButton 
+      variant="text"
+      onClick={()=> setdarkmode(!darkmode)} 
+      title="Dark mode" 
+      className="font-sans font-semibold text-xs text-black dark:text-white" 
+      style={{textTransform:'none'}} 
+      icon={<DarkModeOutlinedIcon 
+      className="text-black dark:text-white"
+      />}/>      
   )
 }
