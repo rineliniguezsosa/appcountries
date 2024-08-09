@@ -44,8 +44,6 @@ export const Countries = () => {
     if(region){
       filteredCountry = await filteredCountry.filter(country => country.region.toLowerCase().includes(region.toLowerCase()))
     }
-
-    console.log(filteredCountry);
     
     setCountries(filteredCountry)
     
@@ -88,12 +86,12 @@ export const Countries = () => {
                         startAdornment={
                           <InputAdornment position="start">
                             <IconButton edge="start">
-                                    <SearchIcon/>
+                                    <SearchIcon className='dark:text-white'/>
                             </IconButton>
                           </InputAdornment>
                         }
                         label="Search for a country..."
-                        className='bg-LightModeElements shadow-md'
+                        className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground'
                         onChange={handleCountryname}
                       />
       
@@ -114,7 +112,7 @@ export const Countries = () => {
                       labelId="select-region"
                       id="region"
                       fullWidth={true}
-                      className='bg-LightModeElements shadow-md'
+                      className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground'
                       label="Filter by Region"
                       onChange={handleRegionChange}
                     >
