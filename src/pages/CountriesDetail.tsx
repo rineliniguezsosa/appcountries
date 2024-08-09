@@ -58,8 +58,17 @@ export const CountriesDetail = () => {
 
       {/* inicio article */}
       <div className="w-full border-2 border-green-300 mt-20">
-        <article className="w-full border-2 border-green-300">
-        </article>
+        {
+          countries && countries.length == 0 ? 
+          (
+            <MuiCircularProgress color="primary"/>
+          )
+          :
+          (
+            <article className="w-full border-2 border-green-300">
+            </article>
+          )
+        }
       </div>
       {/* fin article */}
     </div>
