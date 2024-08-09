@@ -7,13 +7,14 @@ import { useEffect,useState } from "react";
 export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
+  const [countries, setCountries] = useState([]);
   console.log("name",name);
   
   console.log(navigate);
 
   const getCountryByName = async()=>{
     try {
-      
+  
     } catch (error) {
       console.log(error);
       
