@@ -55,9 +55,10 @@ export const CountriesDetail = () => {
       {/* fin div */}
 
       {/* inicio article */}
-      <article className="w-full border-2 border-green-300 mt-20">
-
-      </article>
+      <div className="w-full border-2 border-green-300 mt-20">
+        <article className="w-full border-2 border-green-300">
+        </article>
+      </div>
       {/* fin article */}
     </div>
   )
