@@ -67,7 +67,7 @@ export const CountriesDetail = () => {
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.capital}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.tld}</p>
 
             <span>fdf</span>
         </div>
