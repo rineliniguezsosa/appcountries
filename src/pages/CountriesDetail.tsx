@@ -14,7 +14,7 @@ export const CountriesDetail = () => {
 
   const getCountryByName = async()=>{
     try {
-      const countriesApiUrl:string = `https://restcountries.com/v3.1/name/mexico`;
+      const countriesApiUrl:string = `https://restcountries.com/v3.1/name/${name}`;
     } catch (error) {
       console.log(error);
       
