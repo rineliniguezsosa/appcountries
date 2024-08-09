@@ -3,6 +3,7 @@ import { useNavigate,useParams } from "react-router-dom";
 import { MuiButton } from "../components/MuiButton"
 import WestIcon from '@mui/icons-material/West';
 import { useEffect,useState } from "react";
+import axios from 'axios';
 
 export const CountriesDetail = () => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export const CountriesDetail = () => {
   const getCountryByName = async()=>{
     try {
       const countriesApiUrl:string = `https://restcountries.com/v3.1/name/${name}`;
+      const req = await axios.get(countriesApiUrl);
     } catch (error) {
       console.log(error);
       
