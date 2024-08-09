@@ -64,7 +64,7 @@ export const CountriesDetail = () => {
         <div className="w-full border-2 border-blue-400 py-10">
             <h1 className="font-sans font-extrabold">{item.name.common}</h1>
 
-            <p><strong className="font-sans font-semibold text-xs">Native Name: </strong>{nativeName ? nativeName : ''}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
         </div>
       </article>
     )
