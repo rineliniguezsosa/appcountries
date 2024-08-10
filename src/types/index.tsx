@@ -18,6 +18,7 @@ export interface MuiFormControlProps {
 }
 
 export interface MuiInputLabelProps {
+    style?:CSSProperties,
     className:string,
     id:string,
     htmlFor:string,
