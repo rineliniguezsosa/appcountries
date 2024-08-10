@@ -11,11 +11,6 @@ export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
-  // console.log(countries);
-  
-  // console.log("name",name);
-  
-  // console.log(navigate);
 
   const getCountryByName = async()=>{
     try {
@@ -46,9 +41,18 @@ export const CountriesDetail = () => {
     let nativeNameKey;
     let nativeName:string = '';
     if(item.name.nativeName){
-      nativeNameKey = Object.keys(item.name.nativeName)[0];
+      nativeNameKey = Object.keys(item.name.nativeName)[0];      
       nativeName = item.name.nativeName[nativeNameKey]?.common;      
     }
+    
+    let currencieKey;
+    let currencies:string = '';
+    if(item.currencies){
+      currencieKey = Object.keys(item.currencies)[0];
+      currencies = item.currencies[currencieKey as keyof typeof item.currencies]?.name || '';
+    }
+    console.log(currencies);
+    
     
     return (
       <article key={index} className="w-full border-2 border-green-300 flex flex-col">
@@ -68,6 +72,8 @@ export const CountriesDetail = () => {
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.tld}</p>
+
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Currencies: </strong>{currencies}</p>
 
             <span>fdf</span>
         </div>
