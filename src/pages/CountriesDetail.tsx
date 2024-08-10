@@ -64,11 +64,11 @@ export const CountriesDetail = () => {
     
     
     return (
-      <article key={index} className="w-full border-2 border-green-300 flex flex-col">
+      <article key={index} className="w-full  flex flex-col">
         
         <img  className="w-full"src={item.flags.svg} alt="flag" />
 
-        <div className="w-full border-2 border-blue-400 py-10">
+        <div className="w-full py-10">
             <h1 className="font-sans font-extrabold text-lg pb-5 dark:text-LightModeElements">{item.name.common}</h1>
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
@@ -97,7 +97,7 @@ export const CountriesDetail = () => {
   }
 
   return (
-    <div className="px-7 py-10 w-full border-2 border-red-300 bg-LightModeBgGray dark:bg-DarkModeBg">
+    <div className="px-7 py-10 w-full  bg-LightModeBgGray dark:bg-DarkModeBg">
 
       {/* inicio div */}
       <div className="border-2 border-blue-400">
@@ -113,7 +113,7 @@ export const CountriesDetail = () => {
       {/* fin div */}
 
       {/* inicio article */}
-      <div className="w-full border-2 border-green-300 mt-20">
+      <div className="w-full  mt-20">
         {
           countries && countries.length == 0 ? 
           (
