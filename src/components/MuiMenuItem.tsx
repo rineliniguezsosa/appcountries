@@ -1,5 +1,5 @@
 import { MenuItem } from "@mui/material"
-
+import { MuiMenuItemProps } from '../types';
 
 export const MuiMenuItem = ({title,value,className}:MuiMenuItemProps) => {
   return (
