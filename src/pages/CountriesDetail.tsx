@@ -51,7 +51,16 @@ export const CountriesDetail = () => {
       currencieKey = Object.keys(item.currencies)[0];
       currencies = item.currencies[currencieKey as keyof typeof item.currencies]?.name || '';
     }
-    console.log(currencies);
+    
+    let languajesKey:string[];
+    const languajes:string[] = [];
+    if(item.languages){
+      languajesKey = Object.keys(item.languages)
+      for (const element of languajesKey) {
+        languajes.push(item.languages[element]);
+      }
+    }
+    
     
     
     return (
@@ -74,6 +83,8 @@ export const CountriesDetail = () => {
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.tld}</p>
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Currencies: </strong>{currencies}</p>
+
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
 
             <span>fdf</span>
         </div>
