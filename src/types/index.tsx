@@ -63,3 +63,9 @@ export interface MuiMenuItemProps {
     title:string,
     className:string
 }
+
+export interface MenuItemListProps {
+    id:number,
+    value:string,
+    title:string
+}
