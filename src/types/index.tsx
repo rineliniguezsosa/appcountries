@@ -1,4 +1,4 @@
-import { SelectChangeEvent } from '@mui/material'
+import { SelectChangeEvent,MenuProps } from '@mui/material'
 import React, { CSSProperties } from 'react'
 
 export interface MuiButtonProps {
@@ -40,6 +40,7 @@ export interface MuiSelectProps {
     id:string,
     fullWidth:boolean,
     className?:string,
+    MenuProps?: Partial<MenuProps>,
     label:string,
     value:string,
     children:React.ReactNode,
