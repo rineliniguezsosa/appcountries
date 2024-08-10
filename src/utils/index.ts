@@ -23,13 +23,13 @@ export const MenuItemList:MenuItemListProps[] = [
     },
     {
         id:4,
-        value:'Europe"',
-        title: 'Europe"'
+        value:'Europe',
+        title: 'Europe'
     },
     {
         id:5,
-        value:'Oceania"',
-        title: 'Oceania"'
+        value:'Oceania',
+        title: 'Oceania'
     },
     
 ]
