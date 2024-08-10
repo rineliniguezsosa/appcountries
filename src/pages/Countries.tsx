@@ -11,9 +11,10 @@ import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
 import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import { MuiMenuItem } from '../components/MuiMenuItem';
-import SearchIcon from '@mui/icons-material/Search';
-import axios from 'axios';
 import { CountryCard } from '../components/CountryCard';
+import SearchIcon from '@mui/icons-material/Search';
+import { MenuItemList } from '../utils';
+import axios from 'axios';
 
 export const Countries = () => {
 
