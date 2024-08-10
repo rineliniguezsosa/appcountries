@@ -84,9 +84,11 @@ export const CountriesDetail = () => {
 
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Currencies: </strong>{currencies}</p>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
 
-            <span>fdf</span>
+            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
+
+            {/* todo esto lo mevere en un component */}
         </div>
       </article>
     )
