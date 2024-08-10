@@ -61,7 +61,7 @@ export interface CountryCardProps {
 
 export interface MuiMenuItemProps {
     value:string,
-    title:string,
+    children:React.ReactNode,
     className:string
 }
 
