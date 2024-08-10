@@ -41,6 +41,7 @@ export interface MuiSelectProps {
     fullWidth:boolean,
     className?:string,
     label:string,
+    value:string,
     children:React.ReactNode,
     onChange:(event:SelectChangeEvent<string>)=> void
 }
