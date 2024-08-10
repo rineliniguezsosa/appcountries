@@ -114,6 +114,7 @@ export const Countries = () => {
                       fullWidth={true}
                       className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground'
                       label="Filter by Region"
+                      value={region}
                       onChange={handleRegionChange}
                     >
                       <MenuItem value=""><em>None</em></MenuItem>
