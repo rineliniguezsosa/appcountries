@@ -1,4 +1,6 @@
-export const MenuItemList = [
+import { MenuItemListProps } from './../types/index';
+
+export const MenuItemList:MenuItemListProps[] = [
     {
         id:0,
         value:'',
