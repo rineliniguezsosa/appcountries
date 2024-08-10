@@ -115,6 +115,14 @@ export const Countries = () => {
                       id="region"
                       fullWidth={true}
                       className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
+                      MenuProps={{
+                        PaperProps: {
+                          style: {
+                            backgroundColor: 'transparent',
+                            marginTop: 0, // Remueve márgenes superiores
+                          },
+                        },
+                      }}
                       label="Filter by Region"
                       value={region}
                       onChange={handleRegionChange}
