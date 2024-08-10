@@ -56,3 +56,9 @@ export interface CountryCardProps {
     region:string,
     capital:string[] | undefined
 }
+
+export interface MuiMenuItemProps {
+    value:string,
+    title:string,
+    className:string
+}
