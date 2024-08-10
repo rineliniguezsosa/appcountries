@@ -114,17 +114,16 @@ export const Countries = () => {
                       labelId="select-region"
                       id="region"
                       fullWidth={true}
-                      className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground'
+                      className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
                       label="Filter by Region"
                       value={region}
                       onChange={handleRegionChange}
                     >
-                      <MenuItem value=""><em>None</em></MenuItem>
-                      <MenuItem value="Africa">Africa</MenuItem>
-                      <MenuItem value="Americas">America</MenuItem>
-                      <MenuItem value="Asia">Asia</MenuItem>
-                      <MenuItem value="Europe">Europe</MenuItem>
-                      <MenuItem value="Oceania">Oceania</MenuItem>
+                      {
+                        MenuItemList.map(item => (
+                          <MuiMenuItem key={item.id} value={item.value} title={item.title} className='bg-LightModeElements dark:bg-DarkModeBg text-white'/> 
+                        ))
+                      }
                     </MuiSelect>
            </MuiFormControl>
            {/* fin FormControl*/}
