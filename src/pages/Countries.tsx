@@ -10,6 +10,7 @@ import { MuiCircularProgress } from "../components/MuiCircularProgress";
 import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
 import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
+import { MuiMenuItem } from '../components/MuiMenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import { CountryCard } from '../components/CountryCard';
