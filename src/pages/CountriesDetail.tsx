@@ -24,6 +24,10 @@ export const CountriesDetail = () => {
     }
   }
 
+  const getCountriesByCode = async()=>{
+    
+  }
+
   useEffect(()=>{
     if(!name || name.trim().length === 0){
        returnCountriespage()
