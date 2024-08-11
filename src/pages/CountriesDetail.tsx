@@ -37,7 +37,6 @@ export const CountriesDetail = () => {
   }
 
   const returnCountryDetail = (item:CountriesTypes,index:number):JSX.Element =>{
-    console.log(item);
     let nativeNameKey;
     let nativeName:string = '';
     if(item.name.nativeName){
@@ -65,7 +64,6 @@ export const CountriesDetail = () => {
     
     return (
       <article key={index} className="w-full  flex flex-col">
-        
         <img  className="w-full"src={item.flags.svg} alt="flag" />
 
         <div className="w-full py-10">
@@ -104,11 +102,12 @@ export const CountriesDetail = () => {
         <MuiButton
           onClick={returnCountriespage}
           variant="outlined"
-          title="Back"
-          className="font-sans font-semibold text-xs text-black dark:text-LightModeElements"
-          style={{textTransform:'none',boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",border:'none'}}
+          className=""
+          style={{textTransform:'none',boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",border:'none',backgroundColor:'LightModeBgGray'}}
           icon={<WestIcon className="text-black dark:text-LightModeElements"/>}
-          />
+          >
+          <span className="font-sans font-semibold text-xs text-black dark:text-LightModeElements">Back</span>
+        </MuiButton>
       </div>
       {/* fin div */}
 
