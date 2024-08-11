@@ -63,28 +63,26 @@ export const CountriesDetail = () => {
     
     
     return (
-      <article key={index} className="w-full  flex flex-col">
-        <img  className="w-full"src={item.flags.svg} alt="flag" />
+      <article key={index} className="w-full flex flex-col border-2 border-red-400 xl2:flex-row">
+        <img  className="w-full xl2:w-2/5" src={item.flags.svg} alt="flag" />
 
-        <div className="w-full py-10">
+        <div className="w-full py-10 border-2 border-blue-500 xl2:w-1/2 pl-20">
             <h1 className="font-sans font-extrabold text-lg pb-5 dark:text-LightModeElements">{item.name.common}</h1>
 
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Population: </strong>{item.population}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Sub Region: </strong>{item.subregion}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.tld}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Currencies: </strong>{currencies}</p>
-
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
-
+            <div className="w-full border-2 border-blue-400 xl2:flex flex-row">
+              <div className="border-2 border-red-400 xl2:w-1/2">
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Population: </strong>{item.population}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Region: </strong>{item.region}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Sub Region: </strong>{item.subregion}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Capital: </strong>{item.capital}</p>
+              </div>
+              <div className="border-2 border-black solid xl2:w-1/2">
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Top Level Domain: </strong>{item.tld}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Currencies: </strong>{currencies}</p>
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
+              </div>
+            </div>
             <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
 
             {/* todo esto lo mevere en un component */}
