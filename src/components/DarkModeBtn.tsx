@@ -6,18 +6,25 @@ export const DarkModeBtn = () => {
   const [darkmode, setdarkmode] = useState(false);
 
   useEffect(()=>{
-    darkmode ? document.documentElement.classList.toggle('dark') : document.documentElement.classList.remove('dark')
+    if(darkmode){ 
+      document.documentElement.classList.toggle('dark') 
+      localStorage.setItem('theme',JSON.stringify(true))
+    }else{
+      document.documentElement.classList.remove('dark')
+      localStorage.removeItem('theme');
+    }
   },[darkmode])
 
   return (
     <MuiButton 
       variant="text"
       onClick={()=> setdarkmode(!darkmode)} 
-      title="Dark mode" 
-      className="font-sans font-semibold text-xs text-black dark:text-white" 
+      className="" 
       style={{textTransform:'none'}} 
-      icon={<DarkModeOutlinedIcon 
-      className="text-black dark:text-white"
-      />}/>      
-  )
+      icon={<DarkModeOutlinedIcon className="text-black dark:text-white"/>}
+      >
+        <span className="font-sans font-semibold text-xs text-black dark:text-white">Dark mode</span>
+      </MuiButton>
+        
+  );
 }
