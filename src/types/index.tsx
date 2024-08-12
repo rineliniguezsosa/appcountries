@@ -73,6 +73,7 @@ export interface MenuItemListProps {
 }
 
 export interface MuiLoadingButtonProps {
+    size?:'small'|'medium'|'large',
     loading:boolean,
     variant:'contained'| 'outlined'| 'text',
     className?:string,
