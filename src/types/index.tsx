@@ -74,7 +74,7 @@ export interface MenuItemListProps {
 export interface MuiLoadingButtonProps {
     loading:boolean,
     variant:'contained'| 'outlined'| 'text',
-    className:string,
-    style:CSSProperties,
+    className?:string,
+    style?:CSSProperties,
     children:React.ReactNode
 }
