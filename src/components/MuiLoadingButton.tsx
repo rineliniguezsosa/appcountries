@@ -1,7 +1,8 @@
 import LoadingButton from '@mui/lab/LoadingButton';
+import { MuiLoadingButtonProps }from '../types';
 
-export const MuiLoadingButton = () => {
+export const MuiLoadingButton = ({loading, variant, className, style, children}:MuiLoadingButtonProps) => {
   return (
-    <div>MuiLoadingButton</div>
+    <LoadingButton loading={loading} variant={variant} className={className} style={style}>{children}</LoadingButton>
   )
 }
