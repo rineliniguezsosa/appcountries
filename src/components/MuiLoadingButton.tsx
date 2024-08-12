@@ -1,4 +1,4 @@
-
+import LoadingButton from '@mui/lab/LoadingButton';
 
 export const MuiLoadingButton = () => {
   return (
