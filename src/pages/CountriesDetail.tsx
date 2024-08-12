@@ -27,7 +27,8 @@ export const CountriesDetail = () => {
   const getCountriesByCode = async(code: string[])=>{
     try {
       const countriesApiUrl = `https://restcountries.com/v3.1/alpha?codes=${code.join(',')}`;
-      console.log(countriesApiUrl);
+      const req = await axios.get(countriesApiUrl);
+      const resp = await  req.data;
     } catch (error) {
       console.log("Error:",error);
       
