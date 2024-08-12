@@ -12,7 +12,8 @@ export const CountriesDetail = () => {
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
   const [countriescode, setCountriescode] = useState<[] | CountriesTypes>([])
-
+  console.log("countries by code",countriescode);
+  
   const getCountryByName = async()=>{
     try {
       const countriesApiUrl:string = `https://restcountries.com/v3.1/name/${name}`;
@@ -34,9 +35,7 @@ export const CountriesDetail = () => {
     } catch (error) {
       console.log("Error:",error);
       setCountriescode([])
-    }
-      
-      
+    } 
   }
 
   useEffect(()=>{
@@ -46,6 +45,13 @@ export const CountriesDetail = () => {
       getCountryByName() 
     } 
   },[name])
+
+  useEffect(() => {
+    if(countries.length > 0 && countries[0].borders){
+      getCountriesByCode(countries[0].borders);
+    }
+  }, [countries])
+  
 
   const returnCountriespage = () =>{
     navigate('/')
@@ -74,12 +80,7 @@ export const CountriesDetail = () => {
         languajes.push(item.languages[element]);
       }
     }
-    
-    if(item.borders){
-      getCountriesByCode(item.borders);
-    }
-    
-    
+      
     return (
       <article key={index} className="w-full flex flex-col border-2 border-red-400 xl2:flex-row">
         <img  className="w-full xl2:w-2/5" src={item.flags.svg} alt="flag" />
@@ -101,8 +102,11 @@ export const CountriesDetail = () => {
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Languages: </strong>{languajes.join(' ')}</p>
               </div>
             </div>
-            <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
+            <div className="w-full boder-2 border-red-500">
+              <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
 
+              {/* aqui iran los paises por border's */}
+            </div>
             {/* todo esto lo mevere en un component */}
         </div>
       </article>
