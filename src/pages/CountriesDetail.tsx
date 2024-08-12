@@ -30,9 +30,10 @@ export const CountriesDetail = () => {
       const countriesApiUrl = `https://restcountries.com/v3.1/alpha?codes=${code.join(',')}`;
       const req = await axios.get(countriesApiUrl);
       const resp = await  req.data;
+      setCountriescode(resp)
     } catch (error) {
       console.log("Error:",error);
-      
+      setCountriescode([])
     }
       
       
