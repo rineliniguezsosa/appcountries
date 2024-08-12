@@ -7,7 +7,8 @@ export interface MuiButtonProps {
     children:React.ReactNode,
     className?:string,
     style?:CSSProperties,
-    icon:React.ReactNode
+    icon:React.ReactNode,
+    size?:'small'|'medium'|'large'
 }
 
 export interface MuiFormControlProps {
