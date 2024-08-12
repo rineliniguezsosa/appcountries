@@ -24,8 +24,10 @@ export const CountriesDetail = () => {
     }
   }
 
-  const getCountriesByCode = async()=>{
-    
+  const getCountriesByCode = async(code: string[])=>{
+      console.log(code);
+      const countriesApiUrl = `https://restcountries.com/v3.1/alpha?codes={code},{code},{code}`;
+      
   }
 
   useEffect(()=>{
@@ -64,6 +66,9 @@ export const CountriesDetail = () => {
       }
     }
     
+    if(item.borders){
+      getCountriesByCode(item.borders);
+    }
     
     
     return (
