@@ -107,7 +107,7 @@ export const CountriesDetail = () => {
               <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
               {
                   countriescode.map((item,index)=> (
-                    <MuiLoadingButton loading={!item} style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',marginRight:'.9rem',padding:'0.537rem 1.3rem'}}  key={index} variant="text">
+                    <MuiLoadingButton loading={!item} className="dark:bg-DarkBlueBackground" style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',marginRight:'.9rem',padding:'0.537rem 1.3rem'}}  key={index} variant="text">
                         <span className="font-sans font-semibold text-xs text-black dark:text-LightModeElements">{item.name.common}</span>
                     </MuiLoadingButton>
                   ))
