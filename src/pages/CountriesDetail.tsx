@@ -11,6 +11,7 @@ export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
+  const [countriescode, setCountriescode] = useState<[] | CountriesTypes>([])
 
   const getCountryByName = async()=>{
     try {
