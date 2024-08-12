@@ -12,7 +12,7 @@ export const CountriesDetail = () => {
   const navigate = useNavigate();
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
-  const [countriescode, setCountriescode] = useState<[] | CountriesTypes>([])
+  const [countriescode, setCountriescode] = useState<[] | CountriesTypes[]>([])
   console.log("countries by code",countriescode);
   
   const getCountryByName = async()=>{
@@ -31,7 +31,7 @@ export const CountriesDetail = () => {
     try {
       const countriesApiUrl = `https://restcountries.com/v3.1/alpha?codes=${code.join(',')}`;
       const req = await axios.get(countriesApiUrl);
-      const resp = await  req.data;
+      const resp = await req.data;
       setCountriescode(resp)
     } catch (error) {
       console.log("Error:",error);
@@ -105,8 +105,13 @@ export const CountriesDetail = () => {
             </div>
             <div className="w-full boder-2 border-red-500">
               <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
-
-              {/* aqui iran los paises por border's */}
+              {
+                  countriescode.map((item,index)=> (
+                    <MuiLoadingButton loading={!item}  key={index} variant="text">
+                        <span>{item.name.common}</span>
+                    </MuiLoadingButton>
+                  ))
+              }
             </div>
             {/* todo esto lo mevere en un component */}
         </div>
