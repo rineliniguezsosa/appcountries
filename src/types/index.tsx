@@ -83,3 +83,9 @@ export interface MuiLoadingButtonProps {
     style?:CSSProperties,
     children:React.ReactNode
 }
+
+export interface MuiSelect2Props {
+    label:string
+    children:React.ReactNode
+    value:string
+}
