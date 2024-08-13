@@ -14,7 +14,7 @@ export const CountriesDetail = () => {
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
   const [countriescode, setCountriescode] = useState<[] | CountriesTypes[]>([])
   console.log("countries by code",countriescode);
-  
+
   const getCountryByName = async()=>{
     try {
       const countriesApiUrl:string = `https://restcountries.com/v3.1/name/${name}`;
@@ -104,14 +104,18 @@ export const CountriesDetail = () => {
               </div>
             </div>
             <div className="w-full boder-2 border-red-500">
-              <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
-              {
-                  countriescode.map((item,index)=> (
-                    <MuiLoadingButton loading={!item} className="dark:bg-DarkBlueBackground" style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',marginRight:'.9rem',padding:'0.537rem 1.3rem'}}  key={index} variant="text">
-                        <span className="font-sans font-semibold text-xs text-black dark:text-LightModeElements">{item.name.common}</span>
-                    </MuiLoadingButton>
-                  ))
-              }
+              <div className="w-full border-2 border-red-500">
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-semibold text-sm">Border Countries: </strong></p>
+              </div>
+              <div className="w-full border-2 border-blue-700 flex flex-row flex-wrap gap-3">
+                {
+                    countriescode.map((item,index)=> (
+                      <MuiLoadingButton  loading={!item} className="dark:bg-DarkBlueBackground" style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',width: '6.5rem', height: '2.2rem'}}  key={index} variant="text">
+                          <span className="font-sans font-semibold text-xs text-black dark:text-LightModeElements">{item.name.common}</span>
+                      </MuiLoadingButton>
+                    ))
+                }
+              </div>
             </div>
             {/* todo esto lo mevere en un component */}
         </div>
@@ -124,7 +128,7 @@ export const CountriesDetail = () => {
     <div className="px-7 py-10 w-full  bg-LightModeBgGray dark:bg-DarkModeBg">
 
       {/* inicio div */}
-      <div className="border-2 border-blue-400">
+      <div className="">
         <MuiButton
           onClick={returnCountriespage}
           variant="outlined"
