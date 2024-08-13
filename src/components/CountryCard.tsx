@@ -26,7 +26,7 @@ export const CountryCard = ({flag,name,population,region,capital}:CountryCardPro
                         {region}
                     </p>
                     <p className="text-LightModeDarkGrayInput font-sans font-semibold text-xs">
-                        <strong className="font-sans font-extrabold text-black text-xs dark:text-white">Capital :</strong>
+                        <strong className="font-sans font-extrabold text-black text-xs dark:text-white">Capital: </strong>
                         {capital}
                     </p>
                 </CardContent>
