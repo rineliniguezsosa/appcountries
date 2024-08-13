@@ -102,12 +102,11 @@ export const Countries = () => {
                         
            {/* inicio FormControl*/}
            <MuiFormControl variant="outlined" className="w-3/5 max-w-[240px] xl2:w-1/5">
-                    <MuiInputLabel 
-                      className="font-bold font-sans-extrabold dark:text-LightModeElements" 
+                    <MuiInputLabel  
                       id="select-region"
                       htmlFor="region"
                       >
-                        Filter by Region
+                        <span className="font-sans font-semibold text-black text-sm dark:text-LightModeElements">Filter by Region</span>
                     </MuiInputLabel>
 
                     <MuiSelect
