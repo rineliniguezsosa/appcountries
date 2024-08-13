@@ -134,7 +134,7 @@ export const Countries = () => {
                             value={item.value}
                             className='bg-LightModeElements border-2 border-red-400 dark:bg-DarkModeBg text-white'
                           >
-                          <span className='text-DarkBlueBackground dark:text-LightModeElements'>{item.title}</span>
+                          <span className='font-sans font-semibold text-black dark:text-LightModeElements'>{item.title}</span>
                           </MuiMenuItem>
                         ))
                       }
