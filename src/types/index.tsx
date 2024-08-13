@@ -21,7 +21,7 @@ export interface MuiFormControlProps {
 
 export interface MuiInputLabelProps {
     style?:CSSProperties,
-    className:string,
+    className?:string,
     id:string,
     htmlFor:string,
     children:React.ReactNode
