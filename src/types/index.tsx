@@ -1,5 +1,6 @@
 import { SelectChangeEvent,MenuProps } from '@mui/material'
 import React, { CSSProperties } from 'react'
+import { SxProps, Theme } from "@mui/system";
 
 export interface MuiButtonProps {
     variant:'text' | 'outlined' | 'contained'
@@ -39,13 +40,14 @@ export interface MuiOutlinedInputProps {
 export interface MuiSelectProps {
     labelId:string,
     id:string,
-    fullWidth:boolean,
+    fullWidth?:boolean,
     className?:string,
     MenuProps?: Partial<MenuProps>,
     label:string,
     value:string,
     children:React.ReactNode,
-    onChange:(event:SelectChangeEvent<string>)=> void
+    onChange:(event:SelectChangeEvent<string>)=> void,
+    sx?:SxProps<Theme>
 }
 
 export interface MuiCircularProgressProps {
@@ -63,7 +65,8 @@ export interface CountryCardProps {
 export interface MuiMenuItemProps {
     value:string,
     children:React.ReactNode,
-    className:string
+    className?:string,
+    style?:CSSProperties
 }
 
 export interface MenuItemListProps {
