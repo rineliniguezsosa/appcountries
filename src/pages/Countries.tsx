@@ -58,7 +58,7 @@ export const Countries = () => {
   useEffect(() => {
     filteredCountry()
   }, [countryname,region])
-  
+
 
   const handleCountryname = (event:React.ChangeEvent<HTMLInputElement>) =>{
     setCountryname(event.target.value);
@@ -103,7 +103,7 @@ export const Countries = () => {
            {/* inicio FormControl*/}
            <MuiFormControl variant="outlined" className="w-3/5 max-w-[240px] xl2:w-1/5">
                     <MuiInputLabel 
-                      className="font-bold font-sans-extrabold" 
+                      className="font-bold font-sans-extrabold dark:text-LightModeElements" 
                       id="select-region"
                       htmlFor="region"
                       >
@@ -114,12 +114,13 @@ export const Countries = () => {
                       labelId="select-region"
                       id="region"
                       fullWidth={true}
-                      className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
+                      className='dark:bg-DarkBlueBackground text-white'
                       MenuProps={{
                         PaperProps: {
-                          style: {
-                            backgroundColor: 'transparent',
-                            marginTop: 0, // Remueve márgenes superiores
+                          sx: {
+                            '& .MuiList-root': {
+                              padding: 0, // Elimina el padding de la lista
+                            },
                           },
                         },
                       }}
@@ -129,8 +130,12 @@ export const Countries = () => {
                     >
                       {
                         MenuItemList.map(item => (
-                          <MuiMenuItem key={item.id} value={item.value} className='bg-LightModeElements dark:bg-DarkModeBg text-white'>
-                            <span className='text-DarkBlueBackground dark:text-LightModeElements'>{item.title}</span>
+                          <MuiMenuItem 
+                            key={item.id} 
+                            value={item.value}
+                            className='bg-LightModeElements border-2 border-red-400 dark:bg-DarkModeBg text-white'
+                          >
+                          <span className='text-DarkBlueBackground dark:text-LightModeElements'>{item.title}</span>
                           </MuiMenuItem>
                         ))
                       }
