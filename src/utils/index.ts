@@ -2,11 +2,6 @@ import { MenuItemListProps } from './../types/index';
 
 export const MenuItemList:MenuItemListProps[] = [
     {
-        id:0,
-        value:'',
-        title: ''
-    },
-    {
         id:1,
         value:'Africa',
         title: 'Africa'
