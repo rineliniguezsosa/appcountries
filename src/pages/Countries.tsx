@@ -132,9 +132,9 @@ export const Countries = () => {
                           <MuiMenuItem 
                             key={item.id} 
                             value={item.value}
-                            className='bg-LightModeElements border-2 border-red-400 dark:bg-DarkModeBg text-white'
+                            className='bg-LightModeElements dark:bg-DarkModeBg text-white'
                           >
-                          <span className='font-sans font-semibold text-black dark:text-LightModeElements'>{item.title}</span>
+                          <span className='font-sans font-semibold text-sm text-black dark:text-LightModeElements'>{item.title}</span>
                           </MuiMenuItem>
                         ))
                       }
