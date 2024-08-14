@@ -2,7 +2,7 @@
 import React from 'react'
 import { useEffect,useState } from "react";
 import { 
-  IconButton, InputAdornment, SelectChangeEvent
+  IconButton, InputAdornment, MenuItem, SelectChangeEvent
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
@@ -10,9 +10,9 @@ import { MuiCircularProgress } from "../components/MuiCircularProgress";
 import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
 import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
-import { MuiMenuItem } from '../components/MuiMenuItem';
 import { CountryCard } from '../components/CountryCard';
 import SearchIcon from '@mui/icons-material/Search';
+// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { MenuItemList } from '../utils';
 import axios from 'axios';
 
@@ -21,7 +21,7 @@ export const Countries = () => {
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([])
   const [countriescopy, setCountriescopy] = useState<[] | CountriesTypes[]>([])
   const [countryname, setCountryname] = useState('');
-  const [region, setRegion] = useState('');
+  const [region, setRegion] = useState<string>('');
 
   const getCountries = async () =>{
     try {
@@ -64,7 +64,7 @@ export const Countries = () => {
     setCountryname(event.target.value);
   }
 
-  const handleRegionChange = (event:SelectChangeEvent<string>) => {
+  const handleRegionChange = (event: SelectChangeEvent<string>) => { 
     setRegion(event.target.value);
   }
 
@@ -114,6 +114,7 @@ export const Countries = () => {
                       id="region"
                       fullWidth={true}
                       className='dark:bg-DarkBlueBackground text-white'
+                      // IconComponent={(props) => <ArrowDropDownIcon {...props} className='text-black dark:text-white mr-2' />}
                       MenuProps={{
                         PaperProps: {
                           sx: {
@@ -126,18 +127,12 @@ export const Countries = () => {
                       label="Filter by Region"
                       value={region}
                       onChange={handleRegionChange}
-                    >
-                      {
-                        MenuItemList.map(item => (
-                          <MuiMenuItem 
-                            key={item.id} 
-                            value={item.value}
-                            className='bg-LightModeElements dark:bg-DarkModeBg text-white'
-                          >
-                          <span className='font-sans font-semibold text-sm text-black dark:text-LightModeElements'>{item.title}</span>
-                          </MuiMenuItem>
-                        ))
-                      }
+                      >
+                      {MenuItemList.map(item => (
+                      <MenuItem key={item.id} className='dark:bg-DarkBlueBackground' value={item.value}>
+                        <span className='font-sans font-semibold font-sm dark:text-white'>{item.title}</span>
+                      </MenuItem>
+                      ))}
                     </MuiSelect>
            </MuiFormControl>
            {/* fin FormControl*/}
