@@ -104,7 +104,7 @@ export const CountriesDetail = () => {
               </div>
             </div>
 
-            <div className="w-full border-2 border-blue-500 xl2:mt-5 xl2:flex flex-row">
+            <div className="w-full border-2 border-blue-500 xl2:mt-10 xl2:flex flex-row">
               <div className="border-2 text-left border-red-500 xl2:w-1/3">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Border Countries: </strong></p>
               </div>
