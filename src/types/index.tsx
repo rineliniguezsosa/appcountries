@@ -41,6 +41,7 @@ export interface MuiSelectProps {
     labelId:string,
     id:string,
     fullWidth?:boolean,
+    IconComponent?:React.ComponentType,
     className?:string,
     MenuProps?: Partial<MenuProps>,
     label:string,
@@ -64,7 +65,7 @@ export interface CountryCardProps {
 
 export interface MuiMenuItemProps {
     value:string,
-    children:React.ReactNode,
+    children?:React.ReactNode,
     className?:string,
     style?:CSSProperties
 }
