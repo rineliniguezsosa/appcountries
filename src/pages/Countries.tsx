@@ -130,7 +130,7 @@ export const Countries = () => {
                       >
                       {MenuItemList.map(item => (
                       <MenuItem key={item.id} className='dark:bg-DarkBlueBackground' value={item.value}>
-                        <span className='font-sans font-semibold font-sm dark:text-white'>{item.title}</span>
+                        <span className='font-sans font-semibold text-sm dark:text-white'>{item.title}</span>
                       </MenuItem>
                       ))}
                     </MuiSelect>
