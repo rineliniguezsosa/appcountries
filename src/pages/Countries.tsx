@@ -12,7 +12,7 @@ import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import { CountryCard } from '../components/CountryCard';
 import SearchIcon from '@mui/icons-material/Search';
-// import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { MenuItemList } from '../utils';
 import axios from 'axios';
 
@@ -114,7 +114,7 @@ export const Countries = () => {
                       id="region"
                       fullWidth={true}
                       className='dark:bg-DarkBlueBackground text-white'
-                      // IconComponent={(props) => <ArrowDropDownIcon {...props} className='text-black dark:text-white mr-2' />}
+                      IconComponent={(props) => <ArrowDropDownIcon {...props} className='text-black mr-2 dark:text-white' />}
                       MenuProps={{
                         PaperProps: {
                           sx: {
