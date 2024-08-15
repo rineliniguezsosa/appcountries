@@ -126,7 +126,7 @@ export const CountriesDetail = () => {
   }
 
   return (
-    <div className="px-7 py-10 w-full  bg-LightModeBgGray dark:bg-DarkModeBg">
+    <div className="px-7 py-10 w-full h-dvh h-svh  bg-LightModeBgGray dark:bg-DarkModeBg">
 
       {/* inicio div */}
       <div className="">
@@ -144,7 +144,7 @@ export const CountriesDetail = () => {
       {/* fin div */}
 
       {/* inicio article */}
-      <div className="w-full h-screen  mt-20">
+      <div className="w-full mt-20">
         {
           countries && countries.length == 0 ? 
           (
