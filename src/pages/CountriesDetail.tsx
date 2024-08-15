@@ -133,6 +133,7 @@ export const CountriesDetail = () => {
         <MuiButton
           onClick={returnCountriespage}
           variant="outlined"
+          size="large"
           className="bg-LightModeElements dark:bg-DarkBlueBackground"
           style={{textTransform:'none',boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",border:'none',backgroundColor:'LightModeBgGray'}}
           icon={<WestIcon className="text-black dark:text-LightModeElements"/>}
