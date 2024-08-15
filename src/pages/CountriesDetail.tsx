@@ -83,32 +83,32 @@ export const CountriesDetail = () => {
     }
       
     return (
-      <article key={index} className="w-full flex flex-col border-2 border-red-400 xl2:flex-row">
+      <article key={index} className="w-full flex flex-col xl2:flex-row">
         <img  className="w-full h-auto xl2:w-2/5" src={item.flags.svg} alt="flag" />
 
-        <div className="w-full py-10 border-2 border-green-500 xl2:w-3/4 xl2:pl-20">
-            <h1 className="font-sans font-extrabold text-lg pb-5 border-2 border-blue-400 dark:text-LightModeElements">{item.name.common}</h1>
+        <div className="w-full py-10 xl2:w-3/4 xl2:pl-20">
+            <h1 className="font-sans font-extrabold text-lg pb-5 dark:text-LightModeElements">{item.name.common}</h1>
 
             <div className="w-full xl2:flex flex-row">
-              <div className="border-2 border-red-400 xl2:w-3/5">
+              <div className="xl2:w-3/5">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Population: </strong>{item.population}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Region: </strong>{item.region}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Sub Region: </strong>{item.subregion}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Capital: </strong>{item.capital}</p>
               </div>
-              <div className="border-2 border-blue-500 xl2:w-2/5">
+              <div className="xl2:w-2/5">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Top Level Domain: </strong>{item.tld}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Currencies: </strong>{currencies}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Languages: </strong>{languajes.join(' ')}</p>
               </div>
             </div>
 
-            <div className="w-full border-2 border-blue-500 xl2:mt-10 xl2:flex flex-row">
-              <div className="border-2 text-left border-red-500 xl2:w-1/3">
+            <div className="w-full xl2:mt-10 xl2:flex flex-row">
+              <div className="text-left xl2:w-1/3">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Border Countries: </strong></p>
               </div>
-              <div className="border-2 border-blue-700 flex flex-row flex-wrap gap-3 mt-5 xl2:mt-0">
+              <div className="flex flex-row flex-wrap gap-3 mt-5 xl2:mt-0">
                 {
                     countriescode.map((item,index)=> (
                       <MuiLoadingButton  loading={!item} className="dark:bg-DarkBlueBackground" style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',width: '6.5rem', height: '2.2rem'}}  key={index} variant="text">
