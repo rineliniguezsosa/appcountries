@@ -41,7 +41,7 @@ Desktop - detail
 ![](./src/assets/screenshots/desktop-detail.png)
 
 Mobile - detail
-![](./src/assets/screenshots/mobile.png)
+![](./src/assets/screenshots/mobile-detail.png)
 
 ### Links
 
