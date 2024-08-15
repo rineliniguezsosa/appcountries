@@ -91,11 +91,11 @@ export const CountriesDetail = () => {
 
             <div className="w-full xl2:flex flex-row">
               <div className="border-2 border-red-400 xl2:w-3/5">
+                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Population: </strong>{item.population}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Region: </strong>{item.region}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Sub Region: </strong>{item.subregion}</p>
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-7 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Capital: </strong>{item.capital}</p>
-                <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 xl2:hidden dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Native Name: </strong>{nativeName ? nativeName : ''}</p>
               </div>
               <div className="border-2 border-blue-500 xl2:w-2/5">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Top Level Domain: </strong>{item.tld}</p>
