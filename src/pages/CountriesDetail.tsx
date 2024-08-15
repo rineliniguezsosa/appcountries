@@ -84,7 +84,7 @@ export const CountriesDetail = () => {
       
     return (
       <article key={index} className="w-full flex flex-col border-2 border-red-400 xl2:flex-row">
-        <img  className="w-full xl2:h-auto xl2:w-2/5" src={item.flags.svg} alt="flag" />
+        <img  className="w-full h-auto xl2:w-2/5" src={item.flags.svg} alt="flag" />
 
         <div className="w-full py-10 border-2 border-green-500 xl2:w-3/4 xl2:pl-20">
             <h1 className="font-sans font-extrabold text-lg pb-5 border-2 border-blue-400 dark:text-LightModeElements">{item.name.common}</h1>
