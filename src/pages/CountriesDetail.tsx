@@ -105,10 +105,10 @@ export const CountriesDetail = () => {
             </div>
 
             <div className="w-full xl2:mt-10 xl2:flex flex-row">
-              <div className="text-left xl2:w-1/3">
+              <div className="text-left w-[18%]">
                 <p className="font-sans font-semibold text-sm text-LightModeTextDarkBlue pb-2 dark:text-LightModeElements"><strong className="font-sans font-extrabold text-sm">Border Countries: </strong></p>
               </div>
-              <div className="flex flex-row flex-wrap gap-3 mt-5 xl2:mt-0">
+              <div className="w-[82%] flex flex-row flex-wrap gap-3 mt-5 xl2:mt-0">
                 {
                     countriescode.map((item,index)=> (
                       <MuiLoadingButton  loading={!item} className="dark:bg-DarkBlueBackground" style={{textTransform:'none',boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",border:'none',backgroundColor:'LightModeBgGray',width: '6.5rem', height: '2.2rem'}}  key={index} variant="text">
