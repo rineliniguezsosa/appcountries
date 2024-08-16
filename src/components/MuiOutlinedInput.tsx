@@ -13,7 +13,7 @@ export const MuiOutlinedInput = ({id,fullWidth = false,type,startAdornment,label
       className={className}
       onChange={onChange}
       classes={{
-        input: 'text-black dark:text-white', // Aplica la clase directamente al input
+        input: 'font-sans font-semibold text-sm text-black dark:text-white', // Aplica la clase directamente al input
       }}
     />
   )
