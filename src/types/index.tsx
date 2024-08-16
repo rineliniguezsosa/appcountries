@@ -1,4 +1,4 @@
-import { SelectChangeEvent,MenuProps } from '@mui/material'
+import { SelectChangeEvent,MenuProps, OutlinedInputProps } from '@mui/material'
 import React, { CSSProperties } from 'react'
 import { SxProps, Theme } from "@mui/system";
 
@@ -34,7 +34,8 @@ export interface MuiOutlinedInputProps {
     startAdornment?:React.ReactNode,
     label:string,
     className?:string,
-    onChange:(event:React.ChangeEvent<HTMLInputElement>)=> void
+    onChange:(event:React.ChangeEvent<HTMLInputElement>)=> void,
+    InputProps?:OutlinedInputProps
 }
 
 export interface MuiSelectProps {
