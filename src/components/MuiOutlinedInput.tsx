@@ -2,7 +2,7 @@ import { OutlinedInput } from "@mui/material"
 import { MuiOutlinedInputProps } from "../types"
 
 
-export const MuiOutlinedInput = ({id,fullWidth = false,type,startAdornment,label,className,onChange,InputProps}:MuiOutlinedInputProps) => {
+export const MuiOutlinedInput = ({id,fullWidth = false,type,startAdornment,label,className,onChange}:MuiOutlinedInputProps) => {
   return (
     <OutlinedInput 
       id={id}
@@ -12,7 +12,9 @@ export const MuiOutlinedInput = ({id,fullWidth = false,type,startAdornment,label
       label={label} 
       className={className}
       onChange={onChange}
-      inputProps={InputProps}
+      classes={{
+        input: 'text-black dark:text-white', // Aplica la clase directamente al input
+      }}
     />
   )
 }
