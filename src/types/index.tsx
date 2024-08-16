@@ -22,7 +22,7 @@ export interface MuiFormControlProps {
 export interface MuiInputLabelProps {
     style?:CSSProperties,
     className?:string,
-    id:string,
+    id?:string,
     htmlFor:string,
     children:React.ReactNode
 }
@@ -31,7 +31,7 @@ export interface MuiOutlinedInputProps {
     id:string,
     fullWidth:boolean,
     type:'text',
-    startAdornment:React.ReactNode,
+    startAdornment?:React.ReactNode,
     label:string,
     className?:string,
     onChange:(event:React.ChangeEvent<HTMLInputElement>)=> void
