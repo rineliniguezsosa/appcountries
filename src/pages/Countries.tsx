@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React from 'react'
 import { useEffect,useState } from "react";
 import { 
-  IconButton, InputAdornment, MenuItem, SelectChangeEvent
+  MenuItem, 
+  SelectChangeEvent,
 } from "@mui/material";
 import { MuiFormControl } from "../components/MuiFormControl";
 import { MuiInputLabel } from "../components/MuiInputLabel";
@@ -11,8 +11,7 @@ import { MuiOutlinedInput } from "../components/MuiOutlinedInput";
 import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import { CountryCard } from '../components/CountryCard';
-import SearchIcon from '@mui/icons-material/Search';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { MenuItemList } from '../utils';
 import axios from 'axios';
 
@@ -69,34 +68,29 @@ export const Countries = () => {
   }
 
   return (
-    <div className="w-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
-      <form className="flex flex-col gap-7 border-2 border-red-500 xl2:flex-row justify-between">
+    <div className="w-full h-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
+      <form className="flex flex-col gap-7 xl2:flex-row xl2:justify-between">
            {/* inicio FormControl */}
-           <MuiFormControl variant="outlined" className='w-full xl2:w-1/4'>
-                    <MuiInputLabel 
-                    className="text-LightModeDarkGrayInput" 
-                    id="country-name" 
-                    htmlFor="outlined-adornment-search"
-                    >
+           <MuiFormControl variant="outlined" className='w-full max-w-[370px] xl2:w-1/4'>
+                    <MuiInputLabel
+                      htmlFor="search-country"
+                      className="font-sans font-light text-LightModeBgGray dark:text-LightModeElements"
+                      >
                       Search for a country...
                     </MuiInputLabel>
-
                     <MuiOutlinedInput
-                        id="outlined-adornment-search"
-                        fullWidth={true}
+                        id="search-country"
+                        fullWidth
                         type="text"
-                        startAdornment={
-                          <InputAdornment position="start">
-                            <IconButton edge="start">
-                                    <SearchIcon className='dark:text-white'/>
-                            </IconButton>
-                          </InputAdornment>
-                        }
                         label="Search for a country..."
-                        className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground'
+                        className='bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-LightModeElements'
                         onChange={handleCountryname}
+                        sx={{
+                          '& .MuiOutlinedInput-notchedOutline': {
+                            border: 'none', // Elimina el borde
+                          },
+                        }}
                       />
-      
            </MuiFormControl>
            {/* fin FormControl */}
                         
@@ -112,9 +106,9 @@ export const Countries = () => {
                     <MuiSelect
                       labelId="select-region"
                       id="region"
-                      fullWidth={true}
-                      className='dark:bg-DarkBlueBackground text-white'
-                      IconComponent={(props) => <ArrowDropDownIcon {...props} className='text-black mr-2 dark:text-white' />}
+                      fullWidth
+                      className='text-black bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
+                      IconComponent={(props) => <KeyboardArrowDownIcon {...props} className='text-black mr-2 text-xs dark:text-white' />}
                       MenuProps={{
                         PaperProps: {
                           sx: {
@@ -125,11 +119,20 @@ export const Countries = () => {
                         },
                       }}
                       label="Filter by Region"
+                      sx={{
+                        '& .MuiOutlinedInput-notchedOutline': {
+                          border: 'none', // Elimina el borde
+                        }
+                      }}
                       value={region}
                       onChange={handleRegionChange}
                       >
                       {MenuItemList.map(item => (
-                      <MenuItem key={item.id} className='dark:bg-DarkBlueBackground' value={item.value}>
+                      <MenuItem 
+                       key={item.id} 
+                       className='dark:bg-DarkBlueBackground' 
+                       value={item.value}
+                       >
                         <span className='font-sans font-semibold text-sm dark:text-white'>{item.title}</span>
                       </MenuItem>
                       ))}
@@ -140,7 +143,7 @@ export const Countries = () => {
       </form>
 
       {/* inicio card countries */}
-      <div className="w-full border-2 border-yellow-600 mt-10 flex flex-col items-center gap-10 xl2:flex-row flex-wrap items-start justify-between">
+      <div className="w-full bg-LightModeBgGray mt-10 flex flex-col items-center gap-10 dark:bg-DarkModeBg xl2:flex-row xl2:flex-wrap xl2:justify-start xl2:items-start xl2:content-around">
           {
             countries && countries.length == 0 ? 
             (
