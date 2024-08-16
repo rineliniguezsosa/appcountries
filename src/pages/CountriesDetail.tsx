@@ -126,7 +126,7 @@ export const CountriesDetail = () => {
   }
 
   return (
-    <div className="px-7 py-10 w-full h-dvh h-svh  bg-LightModeBgGray dark:bg-DarkModeBg">
+    <div className="px-7 py-10 w-full  bg-LightModeBgGray dark:bg-DarkModeBg">
 
       {/* inicio div */}
       <div className="">
