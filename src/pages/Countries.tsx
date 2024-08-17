@@ -68,10 +68,10 @@ export const Countries = () => {
   }
 
   return (
-    <div className="w-full h-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
+    <div className="w-full border-2 border-rd-500 px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
       <form className="flex flex-col gap-7 xl2:flex-row xl2:justify-between">
            {/* inicio FormControl */}
-           <MuiFormControl variant="outlined" className='w-full max-w-[370px] xl2:w-1/4'>
+           <MuiFormControl variant="outlined" className='w-full border-2 border-red-500 max-w-[370px] xl2:max-w-[35%]'>
                     <MuiInputLabel
                       htmlFor="search-country"
                       className="font-sans font-light text-LightModeBgGray dark:text-LightModeElements"
@@ -143,7 +143,10 @@ export const Countries = () => {
       </form>
 
       {/* inicio card countries */}
-      <div className="w-full bg-LightModeBgGray mt-10 flex flex-col items-center gap-10 dark:bg-DarkModeBg xl2:flex-row xl2:flex-wrap xl2:justify-start xl2:items-start xl2:content-around">
+      <div 
+        className="w-full border-2 border-red-500 bg-LightModeBgGray gap-y-10 mt-10 flex flex-col items-center 
+        dark:bg-DarkModeBg xl2:flex-row xl2:justify-between xl2:flex-wrap xl2:gap-y-20"
+      >
           {
             countries && countries.length == 0 ? 
             (
