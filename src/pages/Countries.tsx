@@ -68,7 +68,7 @@ export const Countries = () => {
   }
 
   return (
-    <div className="w-full border-2 border-rd-500 px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
+    <div className="w-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
       <form className="flex flex-col gap-7 xl2:flex-row xl2:justify-between">
            {/* inicio FormControl */}
            <MuiFormControl variant="outlined" className='w-full border-2 border-red-500 max-w-[370px] xl2:max-w-[35%]'>
@@ -144,7 +144,7 @@ export const Countries = () => {
 
       {/* inicio card countries */}
       <div 
-        className="w-full border-2 border-red-500 bg-LightModeBgGray gap-y-10 mt-10 flex flex-col items-center 
+        className="w-full bg-LightModeBgGray gap-y-10 mt-10 flex flex-col items-center 
         dark:bg-DarkModeBg xl2:flex-row xl2:justify-between xl2:flex-wrap xl2:gap-y-20"
       >
           {
