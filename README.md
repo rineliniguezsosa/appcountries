@@ -48,6 +48,9 @@ Mobile
 Mobile - detail
 ![](./src/assets/screenshots/mobil-detail.png)
 
+Mobile - detail darkmode
+![](./src/assets/screenshots/mobile-detaildm.png)
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
