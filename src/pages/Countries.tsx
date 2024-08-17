@@ -35,6 +35,11 @@ export const Countries = () => {
     }
   }
 
+  if (region == 'All') {
+    getCountries();
+    setRegion('');
+  }
+
   const filteredCountry = async()=>{
     let filteredCountry = countriescopy;
 
