@@ -73,6 +73,10 @@ export const Countries = () => {
     setRegion(event.target.value);
   }
 
+  const resetSelectOptions = () =>{
+    setRegion('')
+  }
+
   return (
     <div className="w-full px-7 py-7 bg-LightModeBgGray dark:bg-DarkModeBg">
       <form className="flex flex-col gap-7 xl2:flex-row xl2:justify-between">
@@ -114,7 +118,7 @@ export const Countries = () => {
                       id="region"
                       fullWidth
                       className='text-black bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
-                      IconComponent={(props) => region ? <ClearIcon/> : <KeyboardArrowDownIcon {...props} className='text-black mr-2 text-xs dark:text-white' />}
+                      IconComponent={(props) => region ? <ClearIcon className="text-black mr-2 text-xs dark:text-white" onClick={resetSelectOptions}/> : <KeyboardArrowDownIcon {...props} className='text-black mr-2 text-xs dark:text-white' />}
                       MenuProps={{
                         PaperProps: {
                           sx: {
