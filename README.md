@@ -100,7 +100,6 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
@@ -110,6 +109,8 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ## Requirements 
 
 - [Visual Studio Code](https://code.visualstudio.com/) (or any other code editor of your choice)
+- **Node.js** (version 14 or higher) - [Download Node.js](https://nodejs.org/)
+- **npm** (version 6 or higher) - This comes with Node.js, but make sure you have the latest version by running `npm install -g npm`.
 
 ## Install
 
@@ -133,4 +134,20 @@ cd appcountries
 
 ```bash
 code .
+```
+
+4.-**Install the dependencies:**
+
+```bash
+npm install
+````
+
+## Deployment
+
+Running the Development Server
+
+To start the development server and see the application in action, run:
+
+```bash
+npm run dev
 ```
