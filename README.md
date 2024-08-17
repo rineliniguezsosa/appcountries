@@ -114,13 +114,13 @@ Follow these steps to download and run the project locally
   Open your terminal and run the following command:
 
    ```bash
-   git clone https://github.com/rineliniguezsosa/four-card-feature-section.git
+   git clone https://github.com/rineliniguezsosa/appcountries.git
    ```
 
 2.- **Navigate to the project directory:**
 
 ```bash
-cd four-card-feature-section
+cd appcountries
 ```
 
 3.-**Open the project in Visual Studio Code:**
