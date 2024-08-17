@@ -12,6 +12,7 @@ import { CountriesTypes } from '../types/api.countries'
 import { MuiSelect } from "../components/MuiSelect";
 import { CountryCard } from '../components/CountryCard';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ClearIcon from '@mui/icons-material/Clear';
 import { MenuItemList } from '../utils';
 import axios from 'axios';
 
@@ -113,7 +114,7 @@ export const Countries = () => {
                       id="region"
                       fullWidth
                       className='text-black bg-LightModeElements shadow-md dark:bg-DarkBlueBackground text-white'
-                      IconComponent={(props) => <KeyboardArrowDownIcon {...props} className='text-black mr-2 text-xs dark:text-white' />}
+                      IconComponent={(props) => region ? <ClearIcon/> : <KeyboardArrowDownIcon {...props} className='text-black mr-2 text-xs dark:text-white' />}
                       MenuProps={{
                         PaperProps: {
                           sx: {
