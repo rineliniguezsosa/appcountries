@@ -36,16 +36,17 @@ export const Countries = () => {
     }
   }
 
-  if (region == 'All') {
-    getCountries();
-    setRegion('');
-  }
-
+  
   const filteredCountry = async()=>{
     let filteredCountry = countriescopy;
-
+    
     if(countryname){
       filteredCountry = await filteredCountry.filter(country => country.name.common.toLowerCase().includes(countryname.toLowerCase()))
+    }
+    
+    if (region == 'All') {
+      getCountries();
+      setRegion('');
     }
 
     if(region){
@@ -58,6 +59,8 @@ export const Countries = () => {
 
   useEffect(()=>{
     getCountries()
+    console.log('me llame una vez');
+    
   },[])
 
   useEffect(() => {
