@@ -59,8 +59,6 @@ export const Countries = () => {
 
   useEffect(()=>{
     getCountries()
-    console.log('me llame una vez');
-    
   },[])
 
   useEffect(() => {
