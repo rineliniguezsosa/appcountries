@@ -5,13 +5,10 @@ import { Card, CardContent, CardMedia } from "@mui/material"
 export const CountryCard = ({flag,name,population,region,capital}:CountryCardProps) => {
   return (
         <Card
-        className="border-2 border-red-300 xl2:max-h-[350px]" 
          sx={{
-            // minHeight: 300, 
             width: '75%', 
             height:'auto',
             maxWidth:300,
-            // minHeight:300,
           }}
             >
             <Link to={`/countries/detail/${name}`} className="no-underline">
@@ -19,10 +16,10 @@ export const CountryCard = ({flag,name,population,region,capital}:CountryCardPro
                     sx={{ height:140 }}
                     image={flag}
                     title="flags"
-                    className="border-2 border-blue-500 w-full"
+                    className="w-full"
                 />
 
-                <CardContent sx={{paddingX:3,paddingTop:3,width:'100%',height:150}} className="bg-LightModeElements border-2 border-yellow-500 dark:bg-DarkBlueBackground">
+                <CardContent sx={{paddingX:3,paddingTop:3,width:'100%',height:150}} className="bg-LightModeElements dark:bg-DarkBlueBackground">
                     <h1  className="font-sans font-extrabold mb-1 dark:text-white">
                         {name}
                     </h1>
