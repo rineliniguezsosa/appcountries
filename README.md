@@ -14,7 +14,9 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Deployment](#deployment)
 
 
 
@@ -85,6 +87,7 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
+- full stack technologies
 
 ### Useful resources
 
@@ -95,11 +98,33 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@rineliniguezsosa](https://www.frontendmentor.io/profile/rineliniguezsosa)
 
 
-## Acknowledgments
+## Requirements 
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- [Visual Studio Code](https://code.visualstudio.com/) (or any other code editor of your choice)
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+## Install
+
+Follow these steps to download and run the project locally
+
+1. **Clone this repository:**
+
+  Open your terminal and run the following command:
+
+   ```bash
+   git clone https://github.com/rineliniguezsosa/four-card-feature-section.git
+   ```
+
+2.- **Navigate to the project directory:**
+
+```bash
+cd four-card-feature-section
+```
+
+3.-**Open the project in Visual Studio Code:**
+
+```bash
+code .
+```
