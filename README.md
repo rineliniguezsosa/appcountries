@@ -36,7 +36,7 @@ Users should be able to:
 ### Screenshot
 
 Desktop
-![](./screenshot.jpg)
+![](./src/assets/screenshots/desktop-home.png)
 
 Desktop - detail 
 
