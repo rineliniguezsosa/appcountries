@@ -13,7 +13,6 @@ export const CountriesDetail = () => {
   const { name } = useParams<{name:string}>();
   const [countries, setCountries] = useState<[] | CountriesTypes[]>([]);
   const [countriescode, setCountriescode] = useState<[] | CountriesTypes[]>([])
-  console.log("countries by code",countriescode);
 
   const getCountryByName = async()=>{
     try {
