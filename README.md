@@ -67,7 +67,8 @@ Mobile - detail darkmode
 - [React](https://reactjs.org/) - JS library
 
 
-### What I learned, Notes
+### What I learned
+### Notes
 
 component typing
 
