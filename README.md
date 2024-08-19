@@ -69,7 +69,16 @@ Mobile - detail darkmode
 
 ### What I learned, Notes
 
+component typing
 
+```tsx
+sx?:SxProps<Theme>
+```
+Explanation:
+
+- SxProps: It is a generic type that accepts a theme (Theme) as an argument. This type allows you to specify a set of style rules that can be applied to a component.
+
+- Theme: The Theme type refers to the Material UI theme that defines the general appearance of the application (colors, fonts, spacing, etc.). If you're using a custom theme, you can extend the default Material UI theme to include your own styles.
 
 ### Continued development
 
