@@ -80,6 +80,16 @@ Explanation:
 
 - Theme: The Theme type refers to the Material UI theme that defines the general appearance of the application (colors, fonts, spacing, etc.). If you're using a custom theme, you can extend the default Material UI theme to include your own styles.
 
+MenuProps is a property that can be passed to a Select component
+
+```tsx
+ MenuProps?: Partial<MenuProps>,
+```
+
+- MenuProps: is a property that can be passed to a component (such as an MUI Select) to customize the behavior and appearance of the drop-down menu that is displayed when the user interacts with the component.
+
+- Partial<MenuProps> indicates that if you decide to pass MenuProps, you can specify only some of the properties of the MenuProps type.
+
 ### Continued development
 
 - full stack technologies
