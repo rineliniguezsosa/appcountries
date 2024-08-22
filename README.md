@@ -54,7 +54,7 @@ Mobile - detail darkmode
 ### Links
 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-d1mEtcU-IT)
-- Live Site URL: [Add live site URL here](https://rineliniguezsosa.github.io/)
+- Live Site URL: [Add live site URL here](https://rineliniguezsosa.github.io/appcountries/)
 
 ## My process
 
